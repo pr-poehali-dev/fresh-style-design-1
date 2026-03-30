@@ -56,7 +56,7 @@ export default function BrandPage() {
           </div>
           {/* Contents */}
           <div className="relative z-10 flex flex-wrap gap-2 mt-7 pt-7 border-t border-white/10">
-            {['01 Логотип', '02 Анатомия', '03 Варианты', '04 Защитная зона', '05 Размеры', '06 Запреты', '07 Цвета', '08 Типографика', '09 Паттерн', '10 UI'].map(tag => (
+            {['00 Эволюция', '01 Логотип', '02 Анатомия', '03 Варианты', '04 Защитная зона', '05 Размеры', '06 Запреты', '07 Цвета', '08 Типографика', '09 Паттерн', '10 UI', '11 Иконки', '12 Носители'].map(tag => (
               <span key={tag} className="bg-white/[0.08] text-white/70 text-xs px-3 py-1 rounded-full font-mono">{tag}</span>
             ))}
           </div>
@@ -753,6 +753,572 @@ export default function BrandPage() {
                     'Кнопка: всегда зелёная',
                   ].map(s => <p key={s}>· {s}</p>)}
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 00 ЭВОЛЮЦИЯ ЛОГОТИПА ── */}
+        <section className="mb-14">
+          <SectionTitle number="00" title="Эволюция логотипа" />
+          <p className="text-muted-foreground mb-8 text-sm leading-relaxed max-w-2xl">
+            От первого наброска до финального варианта — путь логотипа «Свежо!». Каждая итерация решала конкретную проблему: читаемость, уникальность, масштабируемость.
+          </p>
+
+          {/* Evolution timeline */}
+          <div className="space-y-4 mb-8">
+            {/* V1 */}
+            <div className="bg-white rounded-3xl border border-border/60 p-6 shadow-sm">
+              <div className="flex flex-col sm:flex-row gap-6 items-start">
+                <div className="shrink-0">
+                  <div className="inline-flex items-center gap-2 bg-muted text-muted-foreground text-[11px] font-mono font-bold px-3 py-1 rounded-full mb-3">
+                    Версия 1.0 · Набросок
+                  </div>
+                  <div className="w-full sm:w-64 h-32 bg-[#f5f5f5] rounded-2xl border border-border flex items-center justify-center relative overflow-hidden">
+                    {/* Sketch imitation */}
+                    <div className="flex items-center gap-2 opacity-60" style={{ filter: 'grayscale(1)' }}>
+                      <div className="w-10 h-10 border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-2xl">🥬</div>
+                      <div>
+                        <div style={{ fontFamily: 'serif' }} className="text-2xl font-bold text-gray-600">Свежо!</div>
+                        <div className="text-[9px] text-gray-400 tracking-widest">МАГАЗИН ОВОЩЕЙ</div>
+                      </div>
+                    </div>
+                    <div className="absolute top-2 right-2 text-[10px] text-red-400 font-mono bg-red-50 px-1.5 py-0.5 rounded">черновик</div>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-bold text-foreground mb-1">Первый набросок — «просто текст»</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">Serif-шрифт, листок вместо иконки, серая гамма. Выглядело как советский магазин — не отражало ни свежести, ни современности.</p>
+                  <div className="flex flex-wrap gap-2">
+                    {['❌ Serif не читается мелко', '❌ Нет фирменного цвета', '❌ Слабая иконка', '❌ Нет характера'].map(p => (
+                      <span key={p} className="text-[11px] bg-red-50 text-red-500 px-2.5 py-1 rounded-full border border-red-100">{p}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* V2 */}
+            <div className="bg-white rounded-3xl border border-border/60 p-6 shadow-sm">
+              <div className="flex flex-col sm:flex-row gap-6 items-start">
+                <div className="shrink-0">
+                  <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 text-[11px] font-mono font-bold px-3 py-1 rounded-full mb-3">
+                    Версия 2.0 · Проба цвета
+                  </div>
+                  <div className="w-full sm:w-64 h-32 bg-[#e8f5e9] rounded-2xl border border-green-200 flex items-center justify-center relative overflow-hidden">
+                    <div className="flex items-center gap-2">
+                      <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center text-2xl">🌿</div>
+                      <div>
+                        <div className="font-golos text-2xl font-black text-green-700">Свежо!</div>
+                        <div className="text-[9px] text-green-500 tracking-widest uppercase">овощи и фрукты</div>
+                      </div>
+                    </div>
+                    <div className="absolute top-2 right-2 text-[10px] text-amber-600 font-mono bg-amber-50 px-1.5 py-0.5 rounded">доработка</div>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-bold text-foreground mb-1">Проба цвета — «уже теплее»</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">Добавили зелёный цвет и сменили шрифт на sans-serif. Иконка — листик вместо овоща. Стало живее, но всё ещё обычно и без акцента.</p>
+                  <div className="flex flex-wrap gap-2">
+                    {['✅ Есть фирменный цвет', '✅ Читаемый шрифт', '❌ Слабая иконка', '❌ Нет акцента', '❌ Скучная пунктуация'].map(p => (
+                      <span key={p} className={`text-[11px] px-2.5 py-1 rounded-full border ${p.startsWith('✅') ? 'bg-green-50 text-green-600 border-green-100' : 'bg-red-50 text-red-500 border-red-100'}`}>{p}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* V3 */}
+            <div className="bg-white rounded-3xl border border-border/60 p-6 shadow-sm">
+              <div className="flex flex-col sm:flex-row gap-6 items-start">
+                <div className="shrink-0">
+                  <div className="inline-flex items-center gap-2 bg-orange-50 text-orange-700 text-[11px] font-mono font-bold px-3 py-1 rounded-full mb-3">
+                    Версия 3.0 · Прорыв
+                  </div>
+                  <div className="w-full sm:w-64 h-32 bg-[#faf8f2] rounded-2xl border border-amber-200 flex items-center justify-center relative overflow-hidden">
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-12 h-12 bg-[#2d7a3a] rounded-2xl flex items-center justify-center text-3xl">🥦</div>
+                      <div>
+                        <div className="font-unbounded text-2xl font-black text-[#2d7a3a]">Свежо<span className="text-[#f57c00]">!</span></div>
+                        <div className="font-golos text-[10px] text-[#2d7a3a]/50 tracking-widest uppercase mt-0.5">овощи · фрукты · зелень</div>
+                      </div>
+                    </div>
+                    <div className="absolute top-2 right-2 text-[10px] text-orange-600 font-mono bg-orange-50 px-1.5 py-0.5 rounded">почти финал</div>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-bold text-foreground mb-1">Прорыв — «нашли характер»</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">Шрифт Unbounded дал вес и современность. Брокколи вместо листика — конкретный продукт. Оранжевый «!» стал изюминкой. Но иконка была плоской, без глубины.</p>
+                  <div className="flex flex-wrap gap-2">
+                    {['✅ Характерный шрифт', '✅ Яркий акцент', '✅ Верная иконка', '❌ Иконка без объёма', '❌ Нет дескриптора'].map(p => (
+                      <span key={p} className={`text-[11px] px-2.5 py-1 rounded-full border ${p.startsWith('✅') ? 'bg-green-50 text-green-600 border-green-100' : 'bg-red-50 text-red-500 border-red-100'}`}>{p}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* V4 FINAL */}
+            <div className="bg-gradient-to-br from-[#1a2e1c] to-[#2d7a3a] rounded-3xl p-6 shadow-xl relative overflow-hidden">
+              <div className="absolute right-4 top-4 text-6xl opacity-10 select-none">🥬</div>
+              <div className="flex flex-col sm:flex-row gap-6 items-start relative z-10">
+                <div className="shrink-0">
+                  <div className="inline-flex items-center gap-2 bg-white/20 text-white text-[11px] font-mono font-bold px-3 py-1 rounded-full mb-3">
+                    ✦ Версия 4.0 · Финал
+                  </div>
+                  <div className="w-full sm:w-64 h-32 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 flex items-center justify-center">
+                    <div className="flex items-center gap-3">
+                      <div className="w-14 h-14 bg-gradient-to-br from-[#2d7a3a] to-[#4caf50] rounded-2xl flex items-center justify-center text-4xl shadow-xl ring-2 ring-white/20">🥦</div>
+                      <div>
+                        <div className="font-unbounded text-3xl font-black text-white leading-none">Свежо<span className="text-[#f57c00]">!</span></div>
+                        <div className="font-golos text-[10px] text-white/50 tracking-[0.2em] uppercase mt-1">овощи · фрукты · зелень</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-bold text-white text-lg mb-1">Финальная версия — «готово в производство»</h4>
+                  <p className="text-sm text-white/70 leading-relaxed mb-3">Градиент на иконке дал глубину. Добавлен дескриптор с трекингом. Кольцо вокруг иконки объединило знак и текст. Работает от 24px до 5 метров.</p>
+                  <div className="flex flex-wrap gap-2">
+                    {['✅ Градиентная иконка', '✅ Оранжевый акцент', '✅ Дескриптор', '✅ Масштабируется', '✅ Работает ч/б', '✅ Кириллица'].map(p => (
+                      <span key={p} className="text-[11px] bg-white/15 text-white px-2.5 py-1 rounded-full">{p}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Before / After */}
+          <div className="bg-white rounded-3xl border border-border/60 p-8 shadow-sm">
+            <h3 className="font-bold text-foreground mb-6 text-center">До и после — итоговое сравнение</h3>
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div>
+                <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider text-center mb-4">Было · v1.0</p>
+                <div className="h-40 bg-[#f5f5f5] rounded-2xl border-2 border-dashed border-gray-300 flex items-center justify-center relative">
+                  <div className="flex items-center gap-2 opacity-50" style={{ filter: 'grayscale(1)' }}>
+                    <div className="w-10 h-10 border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-2xl">🥬</div>
+                    <div style={{ fontFamily: 'serif' }} className="text-3xl font-bold text-gray-600">Свежо!</div>
+                  </div>
+                  <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2">
+                    {['Serif', 'Серый', 'Скучно', 'Слабо'].map(t => (
+                      <span key={t} className="text-[10px] bg-red-100 text-red-500 px-1.5 py-0.5 rounded">{t}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p className="text-xs font-bold text-[#2d7a3a] uppercase tracking-wider text-center mb-4">Стало · v4.0</p>
+                <div className="h-40 bg-[#faf8f2] rounded-2xl border-2 border-[#2d7a3a]/20 flex items-center justify-center relative">
+                  <div className="flex items-center gap-3">
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#2d7a3a] to-[#4caf50] rounded-2xl flex items-center justify-center text-4xl shadow-lg">🥦</div>
+                    <div>
+                      <div className="font-unbounded text-3xl font-black text-[#2d7a3a] leading-none">Свежо<span className="text-[#f57c00]">!</span></div>
+                      <div className="font-golos text-[10px] text-[#2d7a3a]/50 tracking-[0.2em] uppercase mt-1">овощи · фрукты · зелень</div>
+                    </div>
+                  </div>
+                  <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2">
+                    {['Unbounded', 'Зелёный', 'Акцент', 'Масштаб'].map(t => (
+                      <span key={t} className="text-[10px] bg-green-100 text-[#2d7a3a] px-1.5 py-0.5 rounded">{t}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 11 ИКОНКИ ДЛЯ СОЦСЕТЕЙ ── */}
+        <section className="mb-14">
+          <SectionTitle number="11" title="Иконки для социальных сетей" />
+          <p className="text-muted-foreground mb-8 text-sm leading-relaxed max-w-2xl">
+            Адаптированные версии иконки для каждой платформы. Учитывают форму маски (круг/квадрат), требования к контрасту и читаемость на тёмном и светлом фоне.
+          </p>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+            {[
+              {
+                platform: 'ВКонтакте', handle: '@svezho_shop', shape: 'rounded-2xl', mask: 'square',
+                variants: [
+                  { bg: 'from-[#2d7a3a] to-[#4caf50]', label: 'Основная', dark: false },
+                  { bg: 'bg-[#1a2e1c]', label: 'Тёмная', dark: true },
+                ],
+              },
+              {
+                platform: 'Instagram', handle: '@svezho.shop', shape: 'rounded-[28%]', mask: 'squircle',
+                variants: [
+                  { bg: 'from-[#2d7a3a] to-[#4caf50]', label: 'Основная', dark: false },
+                  { bg: 'from-[#f57c00] to-[#fbc02d]', label: 'Акцентная', dark: false },
+                ],
+              },
+              {
+                platform: 'Telegram', handle: '@svezho_official', shape: 'rounded-[28%]', mask: 'squircle',
+                variants: [
+                  { bg: 'from-[#2d7a3a] to-[#4caf50]', label: 'Основная', dark: false },
+                  { bg: 'bg-[#1a2e1c]', label: 'Тёмная', dark: true },
+                ],
+              },
+              {
+                platform: 'WhatsApp', handle: '+7 495 123-45-67', shape: 'rounded-full', mask: 'circle',
+                variants: [
+                  { bg: 'from-[#2d7a3a] to-[#4caf50]', label: 'Стандарт', dark: false },
+                  { bg: 'bg-white border-2 border-[#2d7a3a]', label: 'Светлая', dark: false, textGreen: true },
+                ],
+              },
+              {
+                platform: 'YouTube', handle: 'Свежо! Магазин', shape: 'rounded-2xl', mask: 'square',
+                variants: [
+                  { bg: 'from-[#2d7a3a] to-[#4caf50]', label: 'Основная', dark: false },
+                  { bg: 'from-[#1a2e1c] to-[#2d7a3a]', label: 'Тёмная', dark: false },
+                ],
+              },
+              {
+                platform: 'Яндекс Карты', handle: 'Свежо! · 4.9 ★', shape: 'rounded-2xl', mask: 'square',
+                variants: [
+                  { bg: 'from-[#2d7a3a] to-[#4caf50]', label: 'Основная', dark: false },
+                  { bg: 'bg-[#fbc02d]', label: 'Жёлтая', dark: false, textDark: true },
+                ],
+              },
+            ].map((social) => (
+              <div key={social.platform} className="bg-white rounded-3xl border border-border/60 p-6 shadow-sm">
+                <div className="flex items-start justify-between mb-5">
+                  <div>
+                    <p className="font-bold text-foreground">{social.platform}</p>
+                    <p className="text-xs text-muted-foreground font-mono mt-0.5">{social.handle}</p>
+                  </div>
+                  <span className="text-[10px] bg-muted text-muted-foreground px-2 py-0.5 rounded-full font-mono">{social.mask}</span>
+                </div>
+                <div className="flex gap-4 items-end">
+                  {social.variants.map((v, i) => (
+                    <div key={i} className="flex flex-col items-center gap-2">
+                      <div className={`w-16 h-16 ${social.shape} flex items-center justify-center text-3xl shadow-lg overflow-hidden ${v.bg.startsWith('from') ? `bg-gradient-to-br ${v.bg}` : v.bg}`}>
+                        {v.textGreen ? (
+                          <span className="font-unbounded text-xl font-black text-[#2d7a3a]">С<span className="text-[#f57c00]">!</span></span>
+                        ) : v.textDark ? (
+                          <span className="font-unbounded text-xl font-black text-[#1a2e1c]">С<span className="text-[#2d7a3a]">!</span></span>
+                        ) : (
+                          <span className="text-3xl">🥦</span>
+                        )}
+                      </div>
+                      <p className="text-[10px] text-muted-foreground text-center">{v.label}</p>
+                    </div>
+                  ))}
+                  {/* Size preview */}
+                  <div className="ml-auto flex flex-col items-center gap-1.5">
+                    <div className={`w-10 h-10 ${social.shape} bg-gradient-to-br from-[#2d7a3a] to-[#4caf50] flex items-center justify-center text-xl shadow overflow-hidden`}>🥦</div>
+                    <div className={`w-6 h-6 ${social.shape} bg-gradient-to-br from-[#2d7a3a] to-[#4caf50] flex items-center justify-center text-xs shadow overflow-hidden`}>🥦</div>
+                    <p className="text-[9px] text-muted-foreground">масштаб</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Social sizes reference */}
+          <div className="bg-white rounded-3xl border border-border/60 p-6 shadow-sm">
+            <h4 className="font-bold text-foreground mb-4">Технические размеры для загрузки</h4>
+            <div className="overflow-x-auto">
+              <table className="w-full text-xs">
+                <thead>
+                  <tr className="border-b border-border">
+                    <th className="text-left py-2 pr-4 font-bold text-foreground">Платформа</th>
+                    <th className="text-left py-2 pr-4 font-bold text-foreground">Аватар</th>
+                    <th className="text-left py-2 pr-4 font-bold text-foreground">Обложка</th>
+                    <th className="text-left py-2 font-bold text-foreground">Пост</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border/50">
+                  {[
+                    { p: 'ВКонтакте', av: '200×200 px', cover: '1590×400 px', post: '1280×720 px' },
+                    { p: 'Instagram', av: '320×320 px', cover: '1080×566 px', post: '1080×1080 px' },
+                    { p: 'Telegram', av: '640×640 px', cover: '—', post: '1280×720 px' },
+                    { p: 'YouTube', av: '800×800 px', cover: '2560×1440 px', post: '1280×720 px' },
+                  ].map(row => (
+                    <tr key={row.p}>
+                      <td className="py-2.5 pr-4 font-semibold text-foreground">{row.p}</td>
+                      <td className="py-2.5 pr-4 font-mono text-muted-foreground">{row.av}</td>
+                      <td className="py-2.5 pr-4 font-mono text-muted-foreground">{row.cover}</td>
+                      <td className="py-2.5 font-mono text-muted-foreground">{row.post}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 12 НОСИТЕЛИ ── */}
+        <section className="mb-14">
+          <SectionTitle number="12" title="Применение на носителях" />
+          <p className="text-muted-foreground mb-8 text-sm leading-relaxed max-w-2xl">
+            Как фирменный стиль выглядит в реальной жизни — от бумажного пакета до билборда на улице.
+          </p>
+
+          {/* Визитная карточка */}
+          <div className="mb-6">
+            <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-4">Визитная карточка · 90×50 мм</p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {/* Front */}
+              <div>
+                <p className="text-[11px] text-muted-foreground mb-2 text-center">Лицевая сторона</p>
+                <div className="aspect-[9/5] bg-gradient-to-br from-[#1a2e1c] to-[#2d7a3a] rounded-2xl p-6 flex flex-col justify-between shadow-xl relative overflow-hidden">
+                  <div className="absolute right-4 top-4 text-6xl opacity-10 select-none rotate-12">🥬</div>
+                  <div className="absolute inset-0 opacity-[0.04]" style={{
+                    backgroundImage: 'radial-gradient(circle at 20px 20px, white 1.5px, transparent 0)',
+                    backgroundSize: '30px 30px'
+                  }} />
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center text-lg">🥦</div>
+                      <span className="font-unbounded text-lg font-black text-white">Свежо<span className="text-[#f57c00]">!</span></span>
+                    </div>
+                  </div>
+                  <div className="relative z-10">
+                    <p className="font-golos font-bold text-white text-base">Алексей Фермеров</p>
+                    <p className="font-golos text-white/60 text-xs mt-0.5">Основатель · Генеральный директор</p>
+                  </div>
+                </div>
+              </div>
+              {/* Back */}
+              <div>
+                <p className="text-[11px] text-muted-foreground mb-2 text-center">Обратная сторона</p>
+                <div className="aspect-[9/5] bg-[#faf8f2] rounded-2xl p-6 flex flex-col justify-between shadow-xl border border-border relative overflow-hidden">
+                  <div className="absolute inset-0 opacity-[0.07]" style={{
+                    backgroundImage: 'radial-gradient(circle at 20px 20px, #2d7a3a 1.5px, transparent 0)',
+                    backgroundSize: '28px 28px'
+                  }} />
+                  <div className="relative z-10 flex flex-col gap-1.5 text-xs font-golos text-[#1a2e1c]/70">
+                    <span className="flex items-center gap-2">📞 +7 (495) 123-45-67</span>
+                    <span className="flex items-center gap-2">✉️ alexey@svezho.ru</span>
+                    <span className="flex items-center gap-2">🌐 svezho.ru</span>
+                    <span className="flex items-center gap-2">📍 Москва, ул. Фермерская, 12</span>
+                  </div>
+                  <div className="relative z-10 flex items-center justify-between">
+                    <p className="text-[10px] text-[#2d7a3a]/50 font-golos tracking-widest uppercase">овощи · фрукты · зелень</p>
+                    <div className="text-lg">🌱</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Пакет */}
+          <div className="mb-6">
+            <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-4">Бумажный пакет · фирменная упаковка</p>
+            <div className="grid sm:grid-cols-3 gap-4">
+              {/* Малый */}
+              <div className="flex flex-col items-center gap-3">
+                <div className="relative w-32 h-44 bg-[#faf8f2] border border-[#2d7a3a]/20 rounded-b-lg shadow-lg flex flex-col items-center justify-between py-4 overflow-hidden">
+                  {/* Pattern bg */}
+                  <div className="absolute inset-0 grid grid-cols-4 gap-2 p-2 opacity-10 rotate-6 scale-110">
+                    {Array.from({ length: 16 }).map((_, i) => (
+                      <span key={i} className="text-lg select-none">{'🥦🍅🥕🍋🌿🍊🥒🍆'.split('')[i % 8]}</span>
+                    ))}
+                  </div>
+                  {/* Handles */}
+                  <div className="flex gap-4 z-10">
+                    <div className="w-5 h-6 border-b-2 border-[#2d7a3a] rounded-b-full" />
+                    <div className="w-5 h-6 border-b-2 border-[#2d7a3a] rounded-b-full" />
+                  </div>
+                  <div className="z-10 text-center">
+                    <div className="text-2xl mb-1">🥦</div>
+                    <div className="font-unbounded text-sm font-black text-[#2d7a3a]">Свежо<span className="text-[#f57c00]">!</span></div>
+                  </div>
+                  <p className="z-10 text-[9px] text-[#2d7a3a]/40 tracking-widest uppercase font-golos">эко-упаковка</p>
+                </div>
+                <p className="text-[11px] text-muted-foreground">Малый · 180×250мм</p>
+              </div>
+              {/* Средний */}
+              <div className="flex flex-col items-center gap-3">
+                <div className="relative w-40 h-52 bg-[#1a2e1c] rounded-b-lg shadow-xl flex flex-col items-center justify-between py-4 overflow-hidden">
+                  <div className="absolute inset-0 grid grid-cols-4 gap-2 p-2 opacity-10 rotate-6 scale-110">
+                    {Array.from({ length: 16 }).map((_, i) => (
+                      <span key={i} className="text-lg select-none">{'🥦🍅🥕🍋🌿🍊🥒🍆'.split('')[i % 8]}</span>
+                    ))}
+                  </div>
+                  <div className="flex gap-5 z-10">
+                    <div className="w-5 h-7 border-b-2 border-white/40 rounded-b-full" />
+                    <div className="w-5 h-7 border-b-2 border-white/40 rounded-b-full" />
+                  </div>
+                  <div className="z-10 text-center">
+                    <div className="text-3xl mb-1">🥦</div>
+                    <div className="font-unbounded text-base font-black text-white">Свежо<span className="text-[#f57c00]">!</span></div>
+                    <div className="font-golos text-[9px] text-white/40 tracking-widest uppercase mt-0.5">овощи · фрукты</div>
+                  </div>
+                  <p className="z-10 text-[9px] text-white/30 tracking-widest uppercase font-golos">svezho.ru</p>
+                </div>
+                <p className="text-[11px] text-muted-foreground">Средний · 240×320мм</p>
+              </div>
+              {/* Большой */}
+              <div className="flex flex-col items-center gap-3">
+                <div className="relative w-44 h-56 rounded-b-lg shadow-xl flex flex-col items-center justify-between py-4 overflow-hidden" style={{ background: 'linear-gradient(160deg, #2d7a3a 0%, #4caf50 100%)' }}>
+                  <div className="absolute inset-0 grid grid-cols-5 gap-1.5 p-2 opacity-10 rotate-6 scale-110">
+                    {Array.from({ length: 20 }).map((_, i) => (
+                      <span key={i} className="text-base select-none">{'🥦🍅🥕🍋🌿🍊🥒🍆🥑🍓'.split('')[i % 10]}</span>
+                    ))}
+                  </div>
+                  <div className="flex gap-5 z-10">
+                    <div className="w-6 h-7 border-b-2 border-white/50 rounded-b-full" />
+                    <div className="w-6 h-7 border-b-2 border-white/50 rounded-b-full" />
+                  </div>
+                  <div className="z-10 text-center">
+                    <div className="text-4xl mb-1">🥦</div>
+                    <div className="font-unbounded text-xl font-black text-white">Свежо<span className="text-[#fbc02d]">!</span></div>
+                    <div className="font-golos text-[10px] text-white/60 tracking-widest uppercase mt-1">овощи · фрукты · зелень</div>
+                  </div>
+                  <p className="z-10 text-[9px] text-white/50 tracking-widest uppercase font-golos">эко · натурально</p>
+                </div>
+                <p className="text-[11px] text-muted-foreground">Большой · 320×420мм</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Вывеска */}
+          <div className="mb-6">
+            <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-4">Вывеска магазина · фасад</p>
+            <div className="rounded-3xl overflow-hidden shadow-xl border border-border/60">
+              {/* Signage */}
+              <div className="bg-[#1a2e1c] p-8 flex flex-col sm:flex-row items-center justify-between gap-6 relative overflow-hidden min-h-[140px]">
+                <div className="absolute inset-0 opacity-[0.05]" style={{
+                  backgroundImage: 'radial-gradient(circle at 25px 25px, white 2px, transparent 0)',
+                  backgroundSize: '50px 50px'
+                }} />
+                <div className="absolute right-8 text-[120px] opacity-[0.06] select-none rotate-12 leading-none">🥬</div>
+                <div className="relative z-10 flex items-center gap-5">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#2d7a3a] to-[#4caf50] rounded-3xl flex items-center justify-center text-5xl shadow-2xl">🥦</div>
+                  <div>
+                    <div className="font-unbounded text-5xl font-black text-white leading-none">Свежо<span className="text-[#f57c00]">!</span></div>
+                    <div className="font-golos text-sm text-white/50 tracking-[0.3em] uppercase mt-1.5">овощи · фрукты · зелень</div>
+                  </div>
+                </div>
+                <div className="relative z-10 text-right">
+                  <div className="bg-[#f57c00] text-white font-golos font-bold text-sm px-5 py-2.5 rounded-2xl shadow-lg">Открыто 8–22 🕗</div>
+                  <p className="font-golos text-white/40 text-xs mt-2">ул. Фермерская, 12</p>
+                </div>
+              </div>
+              <div className="bg-white p-4 flex justify-between items-center">
+                <p className="text-xs text-muted-foreground">Световая вывеска · материал: алюминиевый профиль + LED-подсветка</p>
+                <p className="text-xs font-mono text-muted-foreground">2400 × 600 мм</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Наружная реклама */}
+          <div className="mb-6">
+            <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-4">Наружная реклама · билборд 3×6м</p>
+            <div className="rounded-3xl overflow-hidden shadow-xl border border-border/60">
+              <div className="aspect-[2/1] relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #1a2e1c 0%, #2d7a3a 60%, #4caf50 100%)' }}>
+                <div className="absolute inset-0 opacity-[0.06]" style={{
+                  backgroundImage: 'radial-gradient(circle at 30px 30px, white 2px, transparent 0)',
+                  backgroundSize: '60px 60px'
+                }} />
+                <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-15">
+                  <div className="grid grid-cols-4 gap-3 p-4 h-full rotate-6 scale-110">
+                    {Array.from({ length: 24 }).map((_, i) => (
+                      <span key={i} className="text-3xl select-none">{'🥦🍅🥕🍋🌿🍊🥒🍆🥑🍓🌱🍇'.split('')[i % 12]}</span>
+                    ))}
+                  </div>
+                </div>
+                <div className="absolute inset-0 p-8 flex flex-col justify-between z-10">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center text-3xl">🥦</div>
+                    <span className="font-unbounded text-2xl font-black text-white">Свежо<span className="text-[#f57c00]">!</span></span>
+                  </div>
+                  <div>
+                    <p className="font-unbounded text-4xl sm:text-5xl font-black text-white leading-tight mb-3">
+                      Свежее —<br />прямо к столу
+                    </p>
+                    <p className="font-golos text-white/70 text-base mb-4">Доставка за 90 минут · Эко-упаковка</p>
+                    <div className="flex flex-wrap gap-3 items-center">
+                      <div className="bg-[#f57c00] text-white font-golos font-black text-lg px-6 py-2.5 rounded-2xl shadow-lg">svezho.ru</div>
+                      <div className="bg-white/15 backdrop-blur-sm text-white font-golos text-sm px-4 py-2.5 rounded-2xl">+7 (495) 123-45-67</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white p-4 flex justify-between items-center">
+                <p className="text-xs text-muted-foreground">Билборд / Суперсайт · Печать на баннерной ткани 440г/м²</p>
+                <p className="text-xs font-mono text-muted-foreground">3000 × 6000 мм · 300 dpi</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Соцсети — посты */}
+          <div className="mb-4">
+            <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-4">Шаблоны для социальных сетей</p>
+            <div className="grid sm:grid-cols-3 gap-4">
+              {/* Пост — квадрат */}
+              <div className="flex flex-col gap-2">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg relative" style={{ background: 'linear-gradient(145deg, #1a2e1c, #2d7a3a)' }}>
+                  <div className="absolute inset-0 opacity-10">
+                    <div className="grid grid-cols-4 gap-2 p-3 rotate-12 scale-125">
+                      {Array.from({ length: 16 }).map((_, i) => (
+                        <span key={i} className="text-2xl select-none">{'🥦🍅🥕🍊🌿🍋🥒🍆'.split('')[i % 8]}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 p-5 flex flex-col justify-between z-10">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 bg-white/20 rounded-lg flex items-center justify-center text-sm">🥦</div>
+                      <span className="font-unbounded text-xs font-black text-white">Свежо<span className="text-[#f57c00]">!</span></span>
+                    </div>
+                    <div>
+                      <span className="bg-[#f57c00] text-white text-[10px] font-bold px-2.5 py-1 rounded-full font-golos">Хит недели</span>
+                      <p className="font-unbounded text-2xl font-black text-white mt-2 leading-tight">Томаты черри<br/>189 ₽ / 500г</p>
+                      <p className="font-golos text-white/60 text-xs mt-1.5">Краснодарский край · Свежие</p>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-[11px] text-muted-foreground text-center">Пост · 1080×1080 px</p>
+              </div>
+
+              {/* Story */}
+              <div className="flex flex-col gap-2">
+                <div className="aspect-[9/16] rounded-2xl overflow-hidden shadow-lg relative max-h-72" style={{ background: 'linear-gradient(180deg, #faf8f2 0%, #e8f5e9 100%)' }}>
+                  <div className="absolute inset-0 opacity-[0.08]" style={{
+                    backgroundImage: 'radial-gradient(circle at 20px 20px, #2d7a3a 1.5px, transparent 0)',
+                    backgroundSize: '28px 28px'
+                  }} />
+                  <div className="absolute inset-0 p-4 flex flex-col justify-between z-10">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 bg-gradient-to-br from-[#2d7a3a] to-[#4caf50] rounded-lg flex items-center justify-center text-sm">🥦</div>
+                      <span className="font-unbounded text-xs font-black text-[#2d7a3a]">Свежо<span className="text-[#f57c00]">!</span></span>
+                    </div>
+                    <div>
+                      <div className="text-5xl text-center mb-2">🥑</div>
+                      <div className="bg-[#2d7a3a] rounded-2xl p-3 text-center">
+                        <p className="font-unbounded text-base font-black text-white leading-tight">Авокадо спелое</p>
+                        <p className="font-golos text-white/70 text-xs mt-1">149 ₽ / шт · Мексика</p>
+                        <div className="bg-[#f57c00] text-white text-xs font-bold px-4 py-1.5 rounded-xl mt-2 font-golos inline-block">Добавить в корзину</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-[11px] text-muted-foreground text-center">Stories · 1080×1920 px</p>
+              </div>
+
+              {/* Горизонтальный */}
+              <div className="flex flex-col gap-2">
+                <div className="aspect-video rounded-2xl overflow-hidden shadow-lg relative" style={{ background: 'linear-gradient(135deg, #fbc02d 0%, #f57c00 100%)' }}>
+                  <div className="absolute right-0 top-0 bottom-0 opacity-20">
+                    <div className="flex flex-col justify-center h-full p-3 gap-1">
+                      {['🥦', '🍅', '🥕', '🍋'].map((e, i) => (
+                        <span key={i} className="text-3xl block">{e}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 p-4 flex flex-col justify-between z-10">
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 bg-white/30 rounded-lg flex items-center justify-center text-xs">🥦</div>
+                      <span className="font-unbounded text-xs font-black text-white">Свежо<span className="text-white/60">!</span></span>
+                    </div>
+                    <div>
+                      <p className="font-unbounded text-lg font-black text-white leading-tight">Скидка 10%<br/>на первый заказ</p>
+                      <p className="font-golos text-white/80 text-[11px] mt-1">Промокод при регистрации</p>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-[11px] text-muted-foreground text-center">Баннер · 1280×720 px</p>
               </div>
             </div>
           </div>
