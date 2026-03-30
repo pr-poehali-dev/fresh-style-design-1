@@ -56,7 +56,7 @@ export default function BrandPage() {
           </div>
           {/* Contents */}
           <div className="relative z-10 flex flex-wrap gap-2 mt-7 pt-7 border-t border-white/10">
-            {['00 Эволюция', '01 Логотип', '02 Анатомия', '03 Варианты', '04 Защитная зона', '05 Размеры', '06 Запреты', '07 Цвета', '08 Типографика', '09 Паттерн', '10 UI', '11 Иконки', '12 Носители'].map(tag => (
+            {['00 Эволюция', '01 Логотип', '02 Анатомия', '03 Варианты', '04 Защитная зона', '05 Размеры', '06 Запреты', '07 Цвета', '08 Типографика', '09 Паттерн', '10 UI', '11 Иконки соцсетей', '12 Носители', '13 Миссия', '14 Визуальная идентичность', '15 Основные / доп. / запрещённые цвета', '16 Шрифт и применение', '17 Применение стиля', '18 Вывески и магазин', '19 Упаковка', '20 Цифровые носители', '21 Руководство'].map(tag => (
               <span key={tag} className="bg-white/[0.08] text-white/70 text-xs px-3 py-1 rounded-full font-mono">{tag}</span>
             ))}
           </div>
@@ -1321,6 +1321,843 @@ export default function BrandPage() {
                 <p className="text-[11px] text-muted-foreground text-center">Баннер · 1280×720 px</p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ── 13 МИССИЯ И ЦЕННОСТИ ── */}
+        <section className="mb-14">
+          <SectionTitle number="13" title="Миссия и ценности бренда" />
+
+          {/* Mission statement */}
+          <div className="relative bg-gradient-to-br from-[#1a2e1c] to-[#2d7a3a] rounded-3xl p-10 mb-6 overflow-hidden">
+            <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(circle at 25px 25px, white 2px, transparent 0)', backgroundSize: '50px 50px' }} />
+            <div className="absolute right-6 top-6 text-8xl opacity-10 select-none rotate-12">🌍</div>
+            <div className="relative z-10 max-w-2xl">
+              <p className="text-white/50 text-xs font-mono uppercase tracking-[0.2em] mb-4">Миссия бренда</p>
+              <p className="font-unbounded text-2xl sm:text-3xl font-black text-white leading-tight mb-4">
+                Делать свежие и натуральные продукты доступными каждой семье
+              </p>
+              <p className="font-golos text-white/70 text-base leading-relaxed">
+                Мы верим: качественная еда не должна быть привилегией. Свежие овощи и фрукты — это основа здоровья, энергии и хорошего настроения. Наша задача — доставить их к вашему столу быстро, честно и с заботой о природе.
+              </p>
+            </div>
+          </div>
+
+          {/* Vision */}
+          <div className="bg-white rounded-3xl border border-border/60 p-8 shadow-sm mb-6">
+            <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">Видение</p>
+            <p className="font-golos text-xl font-semibold text-foreground leading-relaxed">
+              «Стать самым любимым и доверенным продуктовым магазином в каждом городе России — тем, где всегда знают вас по имени»
+            </p>
+          </div>
+
+          {/* Values */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+            {[
+              { icon: '🌱', title: 'Натуральность', color: 'bg-emerald-50 border-emerald-200', accent: 'text-emerald-700', desc: 'Никаких ГМО, ускорителей роста и искусственных добавок. Каждый продукт — такой, каким он должен быть в природе.' },
+              { icon: '🤝', title: 'Честность', color: 'bg-blue-50 border-blue-200', accent: 'text-blue-700', desc: 'Реальные фото, точный вес, прозрачные цены. Мы не прячем происхождение продукта и не завышаем сроки годности.' },
+              { icon: '🌍', title: 'Экология', color: 'bg-green-50 border-green-200', accent: 'text-green-700', desc: 'Эко-упаковка из переработанного картона, минимум пластика, электрокурьеры. Каждый заказ — вклад в чистую планету.' },
+              { icon: '💛', title: 'Забота', color: 'bg-yellow-50 border-yellow-200', accent: 'text-yellow-700', desc: 'Мы семейный бизнес и относимся к каждому клиенту как к гостю в нашем доме. Ваше здоровье и довольство — наш приоритет.' },
+              { icon: '⚡', title: 'Скорость', color: 'bg-orange-50 border-orange-200', accent: 'text-orange-700', desc: 'Доставка за 90 минут — не просто обещание, а стандарт. Свежие продукты должны быть свежими, когда попадают к вам.' },
+              { icon: '🏡', title: 'Местность', color: 'bg-lime-50 border-lime-200', accent: 'text-lime-700', desc: 'Поддерживаем фермеров Подмосковья и Краснодарского края. Покупая у нас, вы помогаете развитию местного сельского хозяйства.' },
+            ].map(v => (
+              <div key={v.title} className={`rounded-3xl border p-6 ${v.color}`}>
+                <div className="text-3xl mb-3">{v.icon}</div>
+                <h3 className={`font-bold text-base mb-2 ${v.accent}`}>{v.title}</h3>
+                <p className="text-sm text-foreground/70 leading-relaxed">{v.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Brand personality */}
+          <div className="bg-white rounded-3xl border border-border/60 p-8 shadow-sm">
+            <h3 className="font-bold text-foreground mb-6">Характер и тон бренда</h3>
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div>
+                <p className="text-xs font-bold text-[#2d7a3a] uppercase tracking-wider mb-4">Бренд говорит как...</p>
+                <div className="space-y-3">
+                  {[
+                    { trait: 'Дружелюбный сосед', desc: 'Просто, тепло, без пафоса' },
+                    { trait: 'Эксперт-фермер', desc: 'Знает откуда каждый продукт' },
+                    { trait: 'Заботливый родитель', desc: 'Думает о здоровье семьи' },
+                    { trait: 'Эко-активист', desc: 'Ненавязчиво продвигает экологию' },
+                  ].map(t => (
+                    <div key={t.trait} className="flex items-center gap-3 p-3 bg-accent rounded-xl">
+                      <span className="w-2 h-2 bg-[#2d7a3a] rounded-full shrink-0" />
+                      <div>
+                        <p className="font-semibold text-sm text-foreground">{t.trait}</p>
+                        <p className="text-xs text-muted-foreground">{t.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <p className="text-xs font-bold text-red-500 uppercase tracking-wider mb-4">Бренд НЕ говорит как...</p>
+                <div className="space-y-3">
+                  {[
+                    { trait: 'Корпоративный менеджер', desc: 'Никакого бюрократического языка' },
+                    { trait: 'Агрессивный продавец', desc: 'Без давления и манипуляций' },
+                    { trait: 'Премиум-бутик', desc: 'Мы доступны, не элитарны' },
+                    { trait: 'Технократ', desc: 'Никаких сложных терминов' },
+                  ].map(t => (
+                    <div key={t.trait} className="flex items-center gap-3 p-3 bg-red-50 rounded-xl border border-red-100">
+                      <span className="w-2 h-2 bg-red-400 rounded-full shrink-0" />
+                      <div>
+                        <p className="font-semibold text-sm text-foreground">{t.trait}</p>
+                        <p className="text-xs text-muted-foreground">{t.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 14 ВИЗУАЛЬНАЯ ИДЕНТИЧНОСТЬ ── */}
+        <section className="mb-14">
+          <SectionTitle number="14" title="Визуальная идентичность" />
+          <p className="text-muted-foreground mb-8 text-sm leading-relaxed max-w-2xl">
+            Визуальный язык бренда строится на 5 принципах. Каждый элемент — от скругления кнопки до выбора фото — должен им соответствовать.
+          </p>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+            {[
+              {
+                num: '1', title: 'Органичность форм',
+                desc: 'Скруглённые углы везде: кнопки, карточки, иконки. Радиус 16–32px. Острых углов нет — они противоречат природному характеру бренда.',
+                demo: <div className="flex gap-2 items-center justify-center p-4">
+                  <div className="w-12 h-12 bg-[#2d7a3a] rounded-3xl flex items-center justify-center text-2xl">🥦</div>
+                  <div className="w-12 h-12 bg-[#f57c00] rounded-2xl flex items-center justify-center text-2xl">🍊</div>
+                  <div className="w-12 h-12 bg-[#fbc02d] rounded-full flex items-center justify-center text-2xl">🌿</div>
+                </div>
+              },
+              {
+                num: '2', title: 'Натуральные текстуры',
+                desc: 'Точечные паттерны имитируют бумагу. Градиенты — как переход цвета в природе. Никаких металлических и глянцевых эффектов.',
+                demo: <div className="p-4 rounded-2xl" style={{ backgroundImage: 'radial-gradient(circle at 18px 18px, #2d7a3a22 2px, transparent 0)', backgroundSize: '30px 30px' }}>
+                  <div className="text-center text-xs text-muted-foreground">текстура · паттерн</div>
+                </div>
+              },
+              {
+                num: '3', title: 'Живые фотографии',
+                desc: 'Реальные овощи и фрукты, естественный свет. Никаких студийных белых фонов — только натура, дерево, лён, зелень.',
+                demo: <div className="p-3 rounded-2xl bg-amber-50 text-center text-xs text-amber-700 font-medium">📸 Натуральный свет<br/>Деревянные поверхности<br/>Живые цвета</div>
+              },
+              {
+                num: '4', title: 'Воздух и пространство',
+                desc: 'Щедрые отступы между элементами. Страница должна «дышать». Перегруженный макет противоречит свежести.',
+                demo: <div className="p-4 flex flex-col gap-2">
+                  <div className="h-2 bg-[#2d7a3a]/20 rounded-full w-3/4" />
+                  <div className="h-2 bg-[#2d7a3a]/10 rounded-full w-1/2" />
+                  <div className="h-2 bg-[#2d7a3a]/20 rounded-full w-2/3" />
+                </div>
+              },
+              {
+                num: '5', title: 'Цветовой акцент',
+                desc: 'На каждом экране — один яркий акцент (оранжевый или жёлтый). Остальное — зелень и нейтраль. Никогда два ярких цвета рядом.',
+                demo: <div className="flex gap-2 p-3 items-center justify-center">
+                  <div className="w-8 h-8 rounded-lg bg-[#2d7a3a]" />
+                  <div className="w-8 h-8 rounded-lg bg-[#4caf50]" />
+                  <div className="w-8 h-8 rounded-lg bg-[#faf8f2] border border-border" />
+                  <div className="w-8 h-8 rounded-lg bg-[#f57c00]" />
+                  <span className="text-xs text-muted-foreground">← 1 акцент</span>
+                </div>
+              },
+              {
+                num: '6', title: 'Иерархия через размер',
+                desc: 'Важное — большое. Акцент достигается масштабом, а не количеством цветов. Цена всегда крупнее названия.',
+                demo: <div className="p-3 text-center font-golos">
+                  <div className="text-2xl font-black text-[#2d7a3a]">189 ₽</div>
+                  <div className="text-sm font-semibold text-foreground">Томаты черри</div>
+                  <div className="text-xs text-muted-foreground">500г · Россия</div>
+                </div>
+              },
+            ].map(p => (
+              <div key={p.num} className="bg-white rounded-3xl border border-border/60 shadow-sm overflow-hidden">
+                <div className="bg-muted/40 min-h-[90px] flex items-center justify-center">{p.demo}</div>
+                <div className="p-5">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="w-5 h-5 bg-[#2d7a3a] text-white rounded-lg flex items-center justify-center text-[10px] font-black">{p.num}</span>
+                    <h4 className="font-bold text-sm text-foreground">{p.title}</h4>
+                  </div>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{p.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Photo style guide */}
+          <div className="bg-white rounded-3xl border border-border/60 p-8 shadow-sm">
+            <h3 className="font-bold text-foreground mb-5">Стиль фотографий</h3>
+            <div className="grid sm:grid-cols-3 gap-4">
+              {[
+                { label: '✅ Используй', items: ['Естественный боковой свет', 'Деревянные поверхности', 'Льняные и хлопковые ткани', 'Глиняная посуда', 'Живая зелень в кадре', 'Вид сверху и 45°'], bg: 'bg-green-50 border-green-200' },
+                { label: '❌ Избегай', items: ['Студийный белый фон', 'Резкие тени от вспышки', 'Пластиковая посуда', 'Слишком насыщенные фильтры', 'Идеально отфотошопленные кадры', 'Фото с watermark'], bg: 'bg-red-50 border-red-200' },
+                { label: '⚙️ Обработка', items: ['Тёплый баланс белого +200K', 'Лёгкое осветление теней', 'Снизить насыщенность −10', 'Поднять зелёный канал +5', 'Зерно 5–10% для органики', 'Хроматическое виньетирование'], bg: 'bg-blue-50 border-blue-200' },
+              ].map(col => (
+                <div key={col.label} className={`rounded-2xl border p-5 ${col.bg}`}>
+                  <p className="font-bold text-sm text-foreground mb-3">{col.label}</p>
+                  <ul className="space-y-1.5">
+                    {col.items.map(i => <li key={i} className="text-xs text-foreground/70 flex items-start gap-1.5"><span className="mt-0.5">·</span>{i}</li>)}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 15 ОСНОВНЫЕ И ДОПОЛНИТЕЛЬНЫЕ ЦВЕТА ── */}
+        <section className="mb-14">
+          <SectionTitle number="15" title="Цвета: основные, дополнительные и запрещённые" />
+
+          {/* Primary */}
+          <div className="mb-6">
+            <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-4">Основная палитра — обязательные цвета бренда</p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {[
+                { name: 'Primary Green', hex: '#2d7a3a', role: 'Логотип, кнопки CTA, заголовки', must: true },
+                { name: 'Light Green', hex: '#4caf50', role: 'Градиенты, иконки, hover', must: true },
+                { name: 'Accent Orange', hex: '#f57c00', role: 'Знак «!», бейджи, акценты', must: true },
+                { name: 'Brand Dark', hex: '#1a2e1c', role: 'Футер, тёмный фон, заголовки', must: true },
+              ].map(c => (
+                <div key={c.hex} className="rounded-2xl overflow-hidden border-2 border-[#2d7a3a]/20 shadow-sm">
+                  <div className="h-20 flex items-end p-3 relative" style={{ background: c.hex }}>
+                    <span className="font-mono text-xs font-bold text-white/90">{c.hex}</span>
+                    <div className="absolute top-2 right-2 bg-white/20 text-white text-[9px] px-1.5 py-0.5 rounded font-bold">ОСНОВНОЙ</div>
+                  </div>
+                  <div className="bg-white p-3">
+                    <p className="font-bold text-xs text-foreground">{c.name}</p>
+                    <p className="text-[11px] text-muted-foreground mt-0.5">{c.role}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Secondary */}
+          <div className="mb-6">
+            <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-4">Дополнительная палитра — вспомогательные цвета</p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {[
+                { name: 'Sunny Yellow', hex: '#fbc02d', role: 'Скидки, звёзды, промо', note: 'только как акцент' },
+                { name: 'Cream', hex: '#faf8f2', role: 'Фоны страниц, карточки', note: 'основной фон' },
+                { name: 'Warm Gray', hex: '#f0ede4', role: 'Поля форм, теги', note: 'нейтральный фон' },
+                { name: 'Light Accent', hex: '#e8f5e9', role: 'Зелёные подложки, hover', note: 'бледный акцент' },
+              ].map(c => (
+                <div key={c.hex} className="rounded-2xl overflow-hidden border border-border shadow-sm">
+                  <div className="h-16 flex items-end p-3 relative" style={{ background: c.hex }}>
+                    <span className="font-mono text-xs font-bold" style={{ color: c.hex === '#faf8f2' || c.hex === '#f0ede4' || c.hex === '#fbc02d' || c.hex === '#e8f5e9' ? '#1a2e1c99' : '#fff' }}>{c.hex}</span>
+                    <div className="absolute top-2 right-2 bg-black/10 text-black/50 text-[9px] px-1.5 py-0.5 rounded">ДОП.</div>
+                  </div>
+                  <div className="bg-white p-3">
+                    <p className="font-bold text-xs text-foreground">{c.name}</p>
+                    <p className="text-[11px] text-muted-foreground mt-0.5">{c.role}</p>
+                    <p className="text-[10px] text-[#2d7a3a] mt-0.5 italic">{c.note}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Forbidden colors */}
+          <div className="bg-white rounded-3xl border border-red-100 p-8 shadow-sm">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-8 h-8 bg-red-500 rounded-xl flex items-center justify-center text-white font-black text-sm">✕</div>
+              <h3 className="font-bold text-foreground">Запрещённые цвета</h3>
+            </div>
+            <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+              Следующие цвета и оттенки <strong>категорически запрещены</strong> в любых материалах бренда — они противоречат ценностям натуральности и доверия.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-6">
+              {[
+                { hex: '#ff00ff', name: 'Кислотный пурпур', reason: 'Агрессия, синтетика' },
+                { hex: '#00ffff', name: 'Неоновый голубой', reason: 'Холод, химия' },
+                { hex: '#ff0000', name: 'Ярко-красный', reason: 'Тревога, опасность' },
+                { hex: '#8b00ff', name: 'Фиолетовый', reason: 'Не связан с природой' },
+                { hex: '#c0c0c0', name: 'Серебристый', reason: 'Металл, не органика' },
+                { hex: '#000080', name: 'Тёмно-синий', reason: 'Противоречит палитре' },
+              ].map(c => (
+                <div key={c.hex} className="rounded-2xl overflow-hidden border-2 border-red-100">
+                  <div className="h-14 relative" style={{ background: c.hex }}>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-7 h-7 bg-white rounded-full flex items-center justify-center text-red-500 font-black text-lg">✕</div>
+                    </div>
+                  </div>
+                  <div className="bg-red-50 p-2.5">
+                    <p className="font-bold text-[11px] text-red-600">{c.name}</p>
+                    <p className="text-[10px] text-red-400 mt-0.5">{c.reason}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                { title: 'Запрещены также:', items: ['Любые флуоресцентные и неоновые цвета', 'Градиенты с несовместимыми цветами (синий + зелёный)', 'Цвета конкурентов — сверяйся с их брендбуками', 'Все оттенки серого как основной цвет текста (только #1a2e1c или muted)'] },
+                { title: 'Исключения:', items: ['Красный допустим только для статусов ошибок и отмены заказа', 'Синий допустим только для ссылок (underline + #2563eb)', 'Серый (#94a3b8) допустим только для second-level текста', 'Белый (#ffffff) допустим только как фон, никогда как цвет текста на белом'] },
+              ].map(block => (
+                <div key={block.title} className="p-4 bg-muted/40 rounded-2xl">
+                  <p className="font-bold text-xs text-foreground mb-2">{block.title}</p>
+                  <ul className="space-y-1.5">
+                    {block.items.map(i => <li key={i} className="text-xs text-muted-foreground flex items-start gap-1.5"><span className="mt-0.5 shrink-0">·</span>{i}</li>)}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 16 ОСНОВНОЙ ШРИФТ И ЕГО ПРИМЕНЕНИЕ ── */}
+        <section className="mb-14">
+          <SectionTitle number="16" title="Основной шрифт и его применение" />
+
+          {/* Application matrix */}
+          <div className="bg-white rounded-3xl border border-border/60 p-8 shadow-sm mb-4">
+            <h3 className="font-bold text-foreground mb-6">Матрица применения шрифтов</h3>
+            <div className="overflow-x-auto">
+              <table className="w-full text-xs">
+                <thead>
+                  <tr className="bg-muted/50">
+                    <th className="text-left p-3 rounded-l-xl font-bold text-foreground">Элемент</th>
+                    <th className="text-left p-3 font-bold text-foreground">Шрифт</th>
+                    <th className="text-left p-3 font-bold text-foreground">Размер</th>
+                    <th className="text-left p-3 font-bold text-foreground">Вес</th>
+                    <th className="text-left p-3 rounded-r-xl font-bold text-foreground">Цвет</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border/40">
+                  {[
+                    { el: 'Название бренда / Логотип', font: 'Unbounded', size: '24–60px', weight: '900', color: '#2d7a3a' },
+                    { el: 'Hero-заголовок', font: 'Unbounded', size: '40–72px', weight: '900', color: '#1a2e1c' },
+                    { el: 'H1 — заголовок страницы', font: 'Golos Text', size: '36–48px', weight: '700', color: '#1a2e1c' },
+                    { el: 'H2 — заголовок раздела', font: 'Golos Text', size: '28–36px', weight: '700', color: '#1a2e1c' },
+                    { el: 'H3 — подзаголовок', font: 'Golos Text', size: '20–24px', weight: '600', color: '#1a2e1c' },
+                    { el: 'Основной текст', font: 'Golos Text', size: '16px', weight: '400', color: '#1a2e1c' },
+                    { el: 'Подписи, теги', font: 'Golos Text', size: '12–14px', weight: '500', color: '#6b7280' },
+                    { el: 'Кнопки', font: 'Golos Text', size: '14–16px', weight: '700', color: '#ffffff' },
+                    { el: 'Навигация', font: 'Golos Text', size: '14px', weight: '500', color: '#1a2e1c' },
+                    { el: 'Цена товара', font: 'Golos Text', size: '18–24px', weight: '700', color: '#2d7a3a' },
+                    { el: 'Дескриптор логотипа', font: 'Golos Text', size: '11–12px', weight: '500', color: '#2d7a3a' },
+                    { el: 'Технические данные', font: 'monospace (system)', size: '11–12px', weight: '400', color: '#9ca3af' },
+                  ].map((row, i) => (
+                    <tr key={row.el} className={i % 2 === 0 ? '' : 'bg-muted/20'}>
+                      <td className="p-3 font-medium text-foreground">{row.el}</td>
+                      <td className="p-3 font-mono text-muted-foreground">{row.font}</td>
+                      <td className="p-3 font-mono text-muted-foreground">{row.size}</td>
+                      <td className="p-3 font-mono text-muted-foreground">{row.weight}</td>
+                      <td className="p-3">
+                        <div className="flex items-center gap-2">
+                          <div className="w-4 h-4 rounded-full border border-border shrink-0" style={{ background: row.color }} />
+                          <span className="font-mono text-muted-foreground">{row.color}</span>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Font in context */}
+          <div className="bg-white rounded-3xl border border-border/60 p-8 shadow-sm mb-4">
+            <h3 className="font-bold text-foreground mb-6">Шрифт в контексте: примеры применения</h3>
+            <div className="space-y-6">
+              {/* Email header */}
+              <div>
+                <p className="text-xs text-muted-foreground mb-2">Email-рассылка — шапка</p>
+                <div className="rounded-2xl border border-border overflow-hidden">
+                  <div className="bg-[#1a2e1c] px-6 py-4 flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 bg-gradient-to-br from-[#2d7a3a] to-[#4caf50] rounded-lg flex items-center justify-center text-base">🥦</div>
+                      <span className="font-unbounded text-base font-black text-white">Свежо<span className="text-[#f57c00]">!</span></span>
+                    </div>
+                    <span className="font-golos text-white/40 text-xs">Еженедельная рассылка</span>
+                  </div>
+                  <div className="bg-[#faf8f2] px-6 py-5">
+                    <p className="font-unbounded text-xl font-black text-[#1a2e1c] mb-1">Хит этой недели 🍓</p>
+                    <p className="font-golos text-sm text-muted-foreground">Клубника из Краснодарского края — 349 ₽ / 500г. Осталось совсем немного!</p>
+                  </div>
+                </div>
+              </div>
+              {/* Price tag */}
+              <div>
+                <p className="text-xs text-muted-foreground mb-2">Ценник на прилавке</p>
+                <div className="inline-flex items-center gap-4 bg-white rounded-2xl border-2 border-[#2d7a3a]/20 px-6 py-4 shadow-sm">
+                  <span className="text-4xl">🥦</span>
+                  <div>
+                    <p className="font-golos font-bold text-lg text-foreground">Брокколи свежая</p>
+                    <p className="font-golos text-sm text-muted-foreground">Италия · ~600г</p>
+                  </div>
+                  <div className="text-right ml-4">
+                    <p className="font-golos font-black text-3xl text-[#2d7a3a]">129 ₽</p>
+                    <p className="font-golos text-xs text-muted-foreground">за штуку</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Fallback fonts */}
+          <div className="bg-amber-50 border border-amber-200 rounded-3xl p-6">
+            <div className="flex items-start gap-3">
+              <span className="text-2xl">⚠️</span>
+              <div>
+                <h4 className="font-bold text-amber-900 mb-2">Резервные шрифты</h4>
+                <p className="text-sm text-amber-800 mb-3">Если Google Fonts недоступны (оффлайн, корпоративные ограничения):</p>
+                <div className="grid sm:grid-cols-2 gap-3 text-xs font-mono text-amber-700">
+                  <div className="bg-white/60 rounded-xl p-3">
+                    <p className="font-bold mb-1">Unbounded →</p>
+                    <p>Montserrat Black → Arial Bold</p>
+                  </div>
+                  <div className="bg-white/60 rounded-xl p-3">
+                    <p className="font-bold mb-1">Golos Text →</p>
+                    <p>Roboto → Helvetica Neue → Arial</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 17 ПРИМЕНЕНИЕ ФИРМЕННОГО СТИЛЯ ── */}
+        <section className="mb-14">
+          <SectionTitle number="17" title="Применение фирменного стиля" />
+
+          {/* Checklist */}
+          <div className="bg-white rounded-3xl border border-border/60 p-8 shadow-sm mb-6">
+            <h3 className="font-bold text-foreground mb-6">Чеклист перед публикацией любого материала</h3>
+            <div className="grid sm:grid-cols-2 gap-6">
+              {[
+                {
+                  title: 'Логотип', icon: '🎯',
+                  items: ['Использована актуальная версия v4.0', 'Соблюдена защитная зона', 'Логотип читаем на фоне', 'Не искажены пропорции', 'Оранжевый «!» присутствует'],
+                },
+                {
+                  title: 'Цвета', icon: '🎨',
+                  items: ['Только из основной или доп. палитры', 'Нет запрещённых цветов', 'Контраст текста ≥ 4.5:1', 'Один акцентный цвет на экран', 'Фон из кремовой/белой гаммы'],
+                },
+                {
+                  title: 'Шрифты', icon: '✍️',
+                  items: ['Golos Text для текста', 'Unbounded только для героя/лого', 'Нет смешивания с чужими шрифтами', 'Кавычки-ёлочки «»', 'Длинное тире —, не дефис'],
+                },
+                {
+                  title: 'Общее', icon: '✅',
+                  items: ['Фото в натуральном стиле', 'Достаточно воздуха на макете', 'Иконки из фирменного набора', 'Нет орфографических ошибок', 'Адаптация под носитель сделана'],
+                },
+              ].map(cl => (
+                <div key={cl.title} className="p-5 bg-muted/30 rounded-2xl">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xl">{cl.icon}</span>
+                    <h4 className="font-bold text-foreground">{cl.title}</h4>
+                  </div>
+                  <ul className="space-y-2">
+                    {cl.items.map(item => (
+                      <li key={item} className="flex items-center gap-2 text-xs text-foreground/80">
+                        <div className="w-4 h-4 rounded border-2 border-[#2d7a3a]/30 flex items-center justify-center shrink-0">
+                          <div className="w-2 h-2 bg-[#2d7a3a] rounded-sm" />
+                        </div>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Context rules */}
+          <div className="grid sm:grid-cols-3 gap-4 mb-6">
+            {[
+              { ctx: '🌐 Веб / приложение', rules: ['Минимальный размер кнопки 44px', 'Радиус карточек 16–24px', 'Анимации не быстрее 200ms', 'Логотип в хедере всегда кликабелен', 'Мобильная версия обязательна'] },
+              { ctx: '🖨️ Печать', rules: ['Цвета в CMYK (не RGB)', 'Разрешение ≥ 300 dpi', 'Отступы от края ≥ 5мм', 'Блид 3мм для обрезки', 'Шрифт не мельче 7pt'] },
+              { ctx: '📱 Социальные сети', rules: ['Логотип виден в превью', 'Текст занимает <20% постера', 'Хэштег #свежо в постах', 'Единый стиль stories и постов', 'Формат видео 9:16 для stories'] },
+            ].map(ctx => (
+              <div key={ctx.ctx} className="bg-white rounded-3xl border border-border/60 p-6 shadow-sm">
+                <p className="font-bold text-sm text-foreground mb-3">{ctx.ctx}</p>
+                <ul className="space-y-2">
+                  {ctx.rules.map(r => (
+                    <li key={r} className="text-xs text-muted-foreground flex items-start gap-1.5">
+                      <span className="text-[#2d7a3a] shrink-0 mt-0.5">→</span>{r}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── 18 ДИЗАЙН ВЫВЕСОК И МАГАЗИНА ── */}
+        <section className="mb-14">
+          <SectionTitle number="18" title="Дизайн вывесок и магазина" />
+          <p className="text-muted-foreground mb-8 text-sm max-w-2xl">Фирменный стиль в физическом пространстве — от входа до прилавка.</p>
+
+          <div className="space-y-6">
+            {/* Фасад */}
+            <div>
+              <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">Фасад магазина</p>
+              <div className="rounded-3xl overflow-hidden border border-border shadow-lg">
+                <div className="relative min-h-[220px] bg-[#e8e0d0]">
+                  {/* Sky */}
+                  <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-sky-200 to-sky-100" />
+                  {/* Building */}
+                  <div className="absolute inset-x-4 sm:inset-x-16 bottom-0 top-12 bg-[#f5f0e8] rounded-t-2xl border border-[#d4c9b8] border-b-0">
+                    {/* Signage strip */}
+                    <div className="absolute top-0 inset-x-0 bg-[#1a2e1c] rounded-t-2xl py-4 px-6 flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-gradient-to-br from-[#2d7a3a] to-[#4caf50] rounded-xl flex items-center justify-center text-2xl shadow-lg">🥦</div>
+                        <div>
+                          <div className="font-unbounded text-2xl font-black text-white">Свежо<span className="text-[#f57c00]">!</span></div>
+                          <div className="font-golos text-[10px] text-white/40 tracking-widest uppercase">овощи · фрукты · зелень</div>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <div className="bg-[#f57c00] text-white font-golos text-xs font-bold px-3 py-1.5 rounded-xl">Открыто</div>
+                        <p className="font-golos text-white/40 text-[10px] mt-1">8:00 – 22:00</p>
+                      </div>
+                    </div>
+                    {/* Window */}
+                    <div className="absolute bottom-0 left-4 right-4 h-20 bg-[#d0e8d4]/40 border border-[#2d7a3a]/20 rounded-t-lg flex items-center justify-center">
+                      <div className="flex gap-4 text-3xl opacity-60">🥦 🍅 🥕 🍊</div>
+                    </div>
+                  </div>
+                  {/* Door */}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-10 h-14 bg-[#1a2e1c] rounded-t-xl border-2 border-[#2d7a3a]" />
+                </div>
+                <div className="bg-white p-4 flex justify-between">
+                  <p className="text-xs text-muted-foreground">Оформление фасада: световая вывеска + декоративные элементы</p>
+                  <p className="text-xs font-mono text-muted-foreground">Концепт</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Интерьер */}
+            <div>
+              <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">Интерьер и навигация</p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {/* Навигационный указатель */}
+                <div className="bg-white rounded-3xl border border-border/60 p-6 shadow-sm">
+                  <p className="text-xs text-muted-foreground mb-4">Навигационный указатель</p>
+                  <div className="space-y-2">
+                    {[
+                      { label: 'Овощи', emoji: '🥦', dir: '→' },
+                      { label: 'Фрукты', emoji: '🍊', dir: '→' },
+                      { label: 'Зелень', emoji: '🌿', dir: '↓' },
+                      { label: 'Касса', emoji: '💳', dir: '←' },
+                    ].map(item => (
+                      <div key={item.label} className="flex items-center justify-between bg-[#1a2e1c] rounded-xl px-4 py-2.5">
+                        <div className="flex items-center gap-3">
+                          <span className="text-xl">{item.emoji}</span>
+                          <span className="font-unbounded text-sm font-black text-white">{item.label}</span>
+                        </div>
+                        <span className="font-unbounded text-xl font-black text-[#f57c00]">{item.dir}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Ценник */}
+                <div className="bg-white rounded-3xl border border-border/60 p-6 shadow-sm">
+                  <p className="text-xs text-muted-foreground mb-4">Фирменный ценник</p>
+                  <div className="space-y-3">
+                    <div className="rounded-2xl overflow-hidden border border-[#2d7a3a]/20 shadow-sm inline-block w-full">
+                      <div className="bg-[#2d7a3a] px-4 py-2 flex items-center justify-between">
+                        <span className="font-golos text-white text-xs font-bold uppercase tracking-wider">Свежо!</span>
+                        <span className="text-white/60 text-xs">🌱 эко</span>
+                      </div>
+                      <div className="bg-white px-4 py-3 flex items-center justify-between">
+                        <div>
+                          <p className="font-golos font-bold text-foreground">Томаты черри</p>
+                          <p className="font-golos text-xs text-muted-foreground">Краснодар · 500г</p>
+                        </div>
+                        <div className="text-right">
+                          <p className="font-golos font-black text-2xl text-[#2d7a3a]">189 ₽</p>
+                          <p className="font-golos text-[10px] text-muted-foreground">за 500г</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="rounded-2xl overflow-hidden border border-[#f57c00]/30 shadow-sm inline-block w-full">
+                      <div className="bg-[#f57c00] px-4 py-2 flex items-center justify-between">
+                        <span className="font-golos text-white text-xs font-bold">ХИТ НЕДЕЛИ</span>
+                        <span className="text-white/80 text-xs">−15%</span>
+                      </div>
+                      <div className="bg-white px-4 py-3 flex items-center justify-between">
+                        <div>
+                          <p className="font-golos font-bold text-foreground">Брокколи</p>
+                          <p className="font-golos text-xs text-muted-foreground">Италия · ~600г</p>
+                        </div>
+                        <div className="text-right">
+                          <p className="font-golos font-black text-2xl text-[#f57c00]">109 ₽</p>
+                          <p className="font-golos text-[10px] line-through text-muted-foreground">129 ₽</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Sticker / наклейка */}
+            <div>
+              <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">Фирменные наклейки на упаковку</p>
+              <div className="flex flex-wrap gap-4 items-end">
+                {[
+                  { bg: 'bg-gradient-to-br from-[#2d7a3a] to-[#4caf50]', size: 'w-28 h-28', shape: 'rounded-full', content: <div className="text-center"><div className="text-3xl">🥦</div><div className="font-unbounded text-xs font-black text-white mt-1">Свежо<span className="text-[#fbc02d]">!</span></div></div> },
+                  { bg: 'bg-[#f57c00]', size: 'w-20 h-20', shape: 'rounded-full', content: <div className="text-center"><div className="font-unbounded text-[10px] font-black text-white leading-tight">ЭКО<br/>УПАК.</div></div> },
+                  { bg: 'bg-[#1a2e1c]', size: 'w-24 h-12', shape: 'rounded-full', content: <div className="font-golos text-xs font-bold text-white text-center tracking-wider">svezho.ru</div> },
+                  { bg: 'bg-[#fbc02d]', size: 'w-16 h-16', shape: 'rounded-2xl', content: <div className="text-center"><div className="font-unbounded text-xs font-black text-[#1a2e1c]">ХИТ!</div></div> },
+                ].map((s, i) => (
+                  <div key={i} className={`${s.size} ${s.shape} ${s.bg} flex items-center justify-center shadow-lg`}>
+                    {s.content}
+                  </div>
+                ))}
+                <p className="text-xs text-muted-foreground self-center ml-2">Круглые и овальные наклейки на пакеты и стрейч-плёнку</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 19 УПАКОВКА И ПРОДУКЦИЯ ── */}
+        <section className="mb-14">
+          <SectionTitle number="19" title="Упаковка и продукция" />
+
+          <div className="grid sm:grid-cols-2 gap-6 mb-6">
+            {/* Фирменная лента */}
+            <div className="bg-white rounded-3xl border border-border/60 p-6 shadow-sm">
+              <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-4">Фирменная лента</p>
+              <div className="space-y-2">
+                <div className="h-10 rounded-xl flex items-center px-4 overflow-hidden" style={{ background: 'repeating-linear-gradient(90deg, #2d7a3a 0px, #2d7a3a 80px, #4caf50 80px, #4caf50 160px)' }}>
+                  <div className="flex gap-16 whitespace-nowrap">
+                    {[0,1,2,3].map(i => <span key={i} className="font-unbounded text-xs font-black text-white">Свежо! 🥦</span>)}
+                  </div>
+                </div>
+                <div className="h-8 rounded-xl flex items-center px-4 overflow-hidden" style={{ background: 'repeating-linear-gradient(90deg, #f57c00 0px, #f57c00 100px, #fbc02d 100px, #fbc02d 200px)' }}>
+                  <div className="flex gap-16 whitespace-nowrap">
+                    {[0,1,2,3].map(i => <span key={i} className="font-golos text-xs font-bold text-white">svezho.ru ·</span>)}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Стаканчик */}
+            <div className="bg-white rounded-3xl border border-border/60 p-6 shadow-sm">
+              <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-4">Фирменный стакан / бутылка</p>
+              <div className="flex items-end gap-6 justify-center">
+                {[
+                  { h: 'h-32', w: 'w-16', label: '0.3л' },
+                  { h: 'h-40', w: 'w-16', label: '0.5л' },
+                ].map(cup => (
+                  <div key={cup.label} className="flex flex-col items-center gap-2">
+                    <div className={`${cup.w} ${cup.h} rounded-b-2xl rounded-t-xl overflow-hidden relative shadow-lg border border-border`} style={{ background: 'linear-gradient(160deg, #1a2e1c 0%, #2d7a3a 50%, #4caf50 100%)' }}>
+                      <div className="absolute inset-0 opacity-10">
+                        {[0,1,2,3,4,5,6,7].map(i => (
+                          <div key={i} className="text-lg select-none" style={{ position: 'absolute', top: `${(i * 14) % 90}%`, left: `${(i * 23) % 80}%` }}>🥦</div>
+                        ))}
+                      </div>
+                      <div className="absolute inset-0 flex flex-col items-center justify-center">
+                        <div className="text-2xl">🥦</div>
+                        <div className="font-unbounded text-xs font-black text-white mt-1">Свежо<span className="text-[#f57c00]">!</span></div>
+                      </div>
+                    </div>
+                    <p className="text-[11px] text-muted-foreground">{cup.label}</p>
+                  </div>
+                ))}
+                <div className="text-xs text-muted-foreground max-w-[140px] self-center">
+                  <p>· Бумажный стакан для смузи</p>
+                  <p className="mt-1">· Фирменный паттерн на внешней стороне</p>
+                  <p className="mt-1">· Логотип в центре</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Продуктовые наклейки */}
+          <div className="bg-white rounded-3xl border border-border/60 p-8 shadow-sm">
+            <h3 className="font-bold text-foreground mb-5">Наклейки на продукты (PLU-лейблы)</h3>
+            <div className="flex flex-wrap gap-4">
+              {[
+                { name: 'Томаты черри', origin: 'Краснодар', weight: '500г', price: '189 ₽', bg: '#2d7a3a', accent: '#f57c00' },
+                { name: 'Брокколи', origin: 'Италия', weight: '~600г', price: '129 ₽', bg: '#1a2e1c', accent: '#4caf50' },
+                { name: 'Манго Кент', origin: 'Пакистан', weight: '~350г', price: '249 ₽', bg: '#f57c00', accent: '#fbc02d' },
+              ].map(label => (
+                <div key={label.name} className="rounded-2xl overflow-hidden shadow-md w-40">
+                  <div className="px-3 py-2 flex items-center justify-between" style={{ background: label.bg }}>
+                    <span className="font-unbounded text-[10px] font-black text-white">Свежо<span style={{ color: label.accent }}>!</span></span>
+                    <span className="text-white/50 text-[9px]">🌱</span>
+                  </div>
+                  <div className="bg-white px-3 py-2.5">
+                    <p className="font-golos font-bold text-xs text-foreground">{label.name}</p>
+                    <p className="font-golos text-[10px] text-muted-foreground">{label.origin} · {label.weight}</p>
+                    <div className="flex items-center justify-between mt-1.5">
+                      <p className="font-golos font-black text-sm" style={{ color: label.bg }}>{label.price}</p>
+                      <div className="w-12 h-8 bg-muted rounded flex items-center justify-center">
+                        <div className="space-y-0.5">
+                          {[0,1,2].map(i => <div key={i} className="h-px bg-foreground/20 w-8" />)}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 20 ЦИФРОВЫЕ НОСИТЕЛИ ── */}
+        <section className="mb-14">
+          <SectionTitle number="20" title="Цифровые носители" />
+
+          <div className="space-y-6">
+            {/* Email */}
+            <div>
+              <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">Email-рассылка</p>
+              <div className="max-w-md rounded-3xl overflow-hidden border border-border shadow-lg">
+                <div className="bg-[#1a2e1c] px-6 py-4 flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <div className="w-7 h-7 bg-gradient-to-br from-[#2d7a3a] to-[#4caf50] rounded-lg flex items-center justify-center text-sm">🥦</div>
+                    <span className="font-unbounded text-sm font-black text-white">Свежо<span className="text-[#f57c00]">!</span></span>
+                  </div>
+                  <span className="font-golos text-white/30 text-[11px]">Отписаться</span>
+                </div>
+                <div className="bg-[#faf8f2] px-6 py-6">
+                  <p className="font-unbounded text-xl font-black text-[#1a2e1c] mb-2">Хиты этой недели 🍓</p>
+                  <p className="font-golos text-sm text-muted-foreground mb-4">Отобрали 5 лучших позиций — только свежее и вкусное</p>
+                  <div className="grid grid-cols-3 gap-2 mb-4">
+                    {['🍓', '🥑', '🥦'].map(e => (
+                      <div key={e} className="bg-white rounded-2xl p-3 text-center border border-border/60">
+                        <div className="text-2xl">{e}</div>
+                        <div className="font-golos text-[10px] font-semibold text-[#2d7a3a] mt-1">149 ₽</div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="bg-[#2d7a3a] text-white font-golos font-bold text-sm px-5 py-3 rounded-2xl text-center">
+                    Перейти в каталог →
+                  </div>
+                </div>
+                <div className="bg-[#1a2e1c] px-6 py-3 text-center">
+                  <p className="font-golos text-white/30 text-[10px]">svezho.ru · Москва · Отписаться</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Push + App */}
+            <div className="grid sm:grid-cols-2 gap-4">
+              {/* Push */}
+              <div>
+                <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">Push-уведомление</p>
+                <div className="bg-white rounded-3xl border border-border/60 p-5 shadow-sm">
+                  <div className="flex items-start gap-3 p-4 bg-muted/40 rounded-2xl">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#2d7a3a] to-[#4caf50] rounded-xl flex items-center justify-center text-xl shrink-0">🥦</div>
+                    <div>
+                      <p className="font-golos font-bold text-sm text-foreground">Свежо!</p>
+                      <p className="font-golos text-xs text-muted-foreground mt-0.5">🎉 Ваш заказ готов! Курьер выехал, ожидайте через 20 минут</p>
+                      <p className="font-golos text-[10px] text-muted-foreground mt-1">сейчас</p>
+                    </div>
+                  </div>
+                  <div className="mt-3 grid grid-cols-2 gap-2">
+                    <div className="bg-muted/40 rounded-2xl p-3 flex items-start gap-3">
+                      <div className="w-8 h-8 bg-gradient-to-br from-[#2d7a3a] to-[#4caf50] rounded-xl flex items-center justify-center text-base shrink-0">🥦</div>
+                      <div>
+                        <p className="font-golos font-bold text-xs text-foreground">Скидка дня 🍊</p>
+                        <p className="font-golos text-[10px] text-muted-foreground">Апельсины −20%</p>
+                      </div>
+                    </div>
+                    <div className="bg-muted/40 rounded-2xl p-3 flex items-start gap-3">
+                      <div className="w-8 h-8 bg-[#f57c00] rounded-xl flex items-center justify-center text-base shrink-0">🚚</div>
+                      <div>
+                        <p className="font-golos font-bold text-xs text-foreground">Доставка</p>
+                        <p className="font-golos text-[10px] text-muted-foreground">Курьер едет</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* QR + Реклама */}
+              <div>
+                <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">QR-код и реклама в поиске</p>
+                <div className="bg-white rounded-3xl border border-border/60 p-5 shadow-sm space-y-4">
+                  {/* QR */}
+                  <div className="flex items-center gap-4 p-4 bg-[#faf8f2] rounded-2xl border border-border/60">
+                    <div className="w-16 h-16 rounded-xl overflow-hidden bg-white border border-border flex items-center justify-center shrink-0">
+                      <div className="grid grid-cols-5 gap-0.5 p-1">
+                        {[1,1,1,1,1, 1,0,0,0,1, 1,0,1,0,1, 1,0,0,0,1, 1,1,1,1,1].map((b, i) => (
+                          <div key={i} className={`w-2 h-2 ${b ? 'bg-[#1a2e1c]' : 'bg-white'}`} />
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <p className="font-golos font-bold text-sm text-foreground">svezho.ru</p>
+                      <p className="font-golos text-xs text-muted-foreground">Сканируй для заказа</p>
+                      <div className="flex items-center gap-1 mt-1">
+                        <div className="w-3 h-3 bg-gradient-to-br from-[#2d7a3a] to-[#4caf50] rounded-sm" />
+                        <span className="font-unbounded text-[10px] font-black text-[#2d7a3a]">Свежо<span className="text-[#f57c00]">!</span></span>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Search ad */}
+                  <div className="p-4 bg-muted/40 rounded-2xl">
+                    <p className="text-[10px] font-mono text-muted-foreground mb-2">Реклама в Яндексе</p>
+                    <p className="text-xs font-bold text-blue-600 underline">Свежо! — доставка овощей и фруктов</p>
+                    <p className="text-[11px] text-green-700 font-mono">svezho.ru</p>
+                    <p className="text-xs text-muted-foreground">Свежие овощи от 89 ₽/кг. Доставка за 90 мин. Эко-упаковка.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 21 РУКОВОДСТВО ПО ИСПОЛЬЗОВАНИЮ ── */}
+        <section className="mb-14">
+          <SectionTitle number="21" title="Руководство по использованию" />
+
+          <div className="bg-gradient-to-br from-[#1a2e1c] to-[#2d7a3a] rounded-3xl p-8 mb-6 text-white relative overflow-hidden">
+            <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 25px 25px, white 2px, transparent 0)', backgroundSize: '50px 50px' }} />
+            <div className="relative z-10">
+              <p className="text-white/60 text-xs uppercase tracking-widest mb-3 font-mono">Кто может использовать материалы</p>
+              <div className="grid sm:grid-cols-3 gap-4 mb-6">
+                {[
+                  { role: 'Сотрудники', icon: '👥', can: ['Соцсети компании', 'Подписи в email', 'Презентации'], cant: ['Менять цвета', 'Создавать новые шрифты'] },
+                  { role: 'Партнёры', icon: '🤝', can: ['Совместные посты', 'Кобрендинг-материалы'], cant: ['Менять логотип', 'Использовать без согласования'] },
+                  { role: 'Поставщики', icon: '🚛', can: ['Упоминать в портфолио'], cant: ['Использовать логотип без договора', 'Подражать стилю'] },
+                ].map(r => (
+                  <div key={r.role} className="bg-white/10 rounded-2xl p-4">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-2xl">{r.icon}</span>
+                      <p className="font-bold text-white">{r.role}</p>
+                    </div>
+                    <p className="text-[11px] text-white/60 mb-1">✅ Может:</p>
+                    {r.can.map(c => <p key={c} className="text-xs text-white/80 mb-0.5">· {c}</p>)}
+                    <p className="text-[11px] text-white/40 mt-2 mb-1">❌ Не может:</p>
+                    {r.cant.map(c => <p key={c} className="text-xs text-white/50 mb-0.5">· {c}</p>)}
+                  </div>
+                ))}
+              </div>
+              <div className="border-t border-white/10 pt-4">
+                <p className="text-white/50 text-xs">По вопросам использования фирменного стиля: <span className="text-white/80">brand@svezho.ru</span></p>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { title: '🔄 Обновление брендбука', items: ['Версия 1.0 — базовый брендбук', 'Версия 2.0 — расширенная типографика', 'Версия 3.0 (плановая) — мобильное приложение', 'При обновлении — письмо всем сотрудникам', 'Архивные версии хранятся на drive.svezho.ru'] },
+              { title: '📂 Файлы и форматы', items: ['Логотип .SVG — для веба и масштабирования', 'Логотип .EPS — для полиграфии и печати', 'Логотип .PNG (300dpi) — для документов', 'Цвета .ASE/.ACO — библиотека Photoshop/Illustrator', 'Шрифты — Google Fonts (бесплатно, без лицензии)'] },
+              { title: '📋 Согласование', items: ['Нестандартные материалы согласуй с маркетингом', 'Срок согласования — 3 рабочих дня', 'Правки дизайнер вносит за 1–2 дня', 'Финальное утверждение — у основателя', 'Документация хранится в Notion-базе бренда'] },
+              { title: '📞 Контакты бренда', items: ['Маркетинг: marketing@svezho.ru', 'Дизайн: design@svezho.ru', 'Пресс: pr@svezho.ru', 'Telegram: @svezho_brand', 'Брендбук онлайн: brand.svezho.ru'] },
+            ].map(block => (
+              <div key={block.title} className="bg-white rounded-3xl border border-border/60 p-6 shadow-sm">
+                <h4 className="font-bold text-foreground mb-4">{block.title}</h4>
+                <ul className="space-y-2">
+                  {block.items.map(i => (
+                    <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
+                      <span className="w-1.5 h-1.5 bg-[#2d7a3a] rounded-full mt-1.5 shrink-0" />{i}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </section>
 
