@@ -1,28 +1,45 @@
+import { useState } from 'react';
+import Navbar from '@/components/Navbar';
+import CartDrawer from '@/components/CartDrawer';
+import Footer from '@/components/Footer';
+import HomePage from '@/pages/HomePage';
+import CatalogPage from '@/pages/CatalogPage';
+import DeliveryPage from '@/pages/DeliveryPage';
+import AboutPage from '@/pages/AboutPage';
+import ReviewsPage from '@/pages/ReviewsPage';
+import ContactsPage from '@/pages/ContactsPage';
+import ProfilePage from '@/pages/ProfilePage';
 
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
+export default function App() {
+  const [activePage, setActivePage] = useState('home');
+  const [cartOpen, setCartOpen] = useState(false);
 
-const queryClient = new QueryClient();
+  const navigate = (page: string) => {
+    setActivePage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+  const renderPage = () => {
+    switch (activePage) {
+      case 'home': return <HomePage onNavigate={navigate} />;
+      case 'catalog': return <CatalogPage />;
+      case 'delivery': return <DeliveryPage />;
+      case 'about': return <AboutPage />;
+      case 'reviews': return <ReviewsPage />;
+      case 'contacts': return <ContactsPage />;
+      case 'profile': return <ProfilePage />;
+      default: return <HomePage onNavigate={navigate} />;
+    }
+  };
 
-export default App;
+  return (
+    <div className="min-h-screen bg-background flex flex-col">
+      <Navbar activePage={activePage} onNavigate={navigate} onCartOpen={() => setCartOpen(true)} />
+      <main className="flex-1">
+        {renderPage()}
+      </main>
+      <Footer onNavigate={navigate} />
+      <CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)} />
+    </div>
+  );
+}
