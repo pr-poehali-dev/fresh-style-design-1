@@ -52,6 +52,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 { id: 'about', label: 'О нас' },
                 { id: 'contacts', label: 'Контакты' },
                 { id: 'profile', label: 'Профиль' },
+                { id: 'brand', label: 'Брендбук' },
               ].map(link => (
                 <li key={link.id}>
                   <button

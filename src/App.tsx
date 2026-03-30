@@ -9,6 +9,7 @@ import AboutPage from '@/pages/AboutPage';
 import ReviewsPage from '@/pages/ReviewsPage';
 import ContactsPage from '@/pages/ContactsPage';
 import ProfilePage from '@/pages/ProfilePage';
+import BrandPage from '@/pages/BrandPage';
 
 export default function App() {
   const [activePage, setActivePage] = useState('home');
@@ -28,6 +29,7 @@ export default function App() {
       case 'reviews': return <ReviewsPage />;
       case 'contacts': return <ContactsPage />;
       case 'profile': return <ProfilePage />;
+      case 'brand': return <BrandPage />;
       default: return <HomePage onNavigate={navigate} />;
     }
   };
