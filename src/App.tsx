@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import CartDrawer from '@/components/CartDrawer';
 import Footer from '@/components/Footer';
@@ -11,13 +11,29 @@ import ContactsPage from '@/pages/ContactsPage';
 import ProfilePage from '@/pages/ProfilePage';
 import BrandPage from '@/pages/BrandPage';
 
+const VALID_PAGES = ['home', 'catalog', 'delivery', 'about', 'reviews', 'contacts', 'profile', 'brand'];
+
+function getPageFromHash(): string {
+  const hash = window.location.hash.replace('#', '');
+  return VALID_PAGES.includes(hash) ? hash : 'home';
+}
+
 export default function App() {
-  const [activePage, setActivePage] = useState('home');
+  const [activePage, setActivePage] = useState(getPageFromHash);
   const [cartOpen, setCartOpen] = useState(false);
 
+  useEffect(() => {
+    const handler = () => {
+      const page = getPageFromHash();
+      setActivePage(page);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    window.addEventListener('hashchange', handler);
+    return () => window.removeEventListener('hashchange', handler);
+  }, []);
+
   const navigate = (page: string) => {
-    setActivePage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.location.hash = page;
   };
 
   const renderPage = () => {
