@@ -765,6 +765,34 @@ export default function BrandPage() {
             От первого наброска до финального варианта — путь логотипа «Свежо!». Каждая итерация решала конкретную проблему: читаемость, уникальность, масштабируемость.
           </p>
 
+          {/* Year timeline strip */}
+          <div className="relative mb-8 overflow-x-auto">
+            <div className="flex items-center gap-0 min-w-max px-1">
+              {[
+                { year: '2018', label: 'Основание', active: false },
+                { year: '2019', label: 'Ребрендинг', active: false },
+                { year: '2021', label: 'Прорыв', active: false },
+                { year: '2024', label: 'Сейчас', active: true },
+              ].map((y, i, arr) => (
+                <div key={y.year} className="flex items-center">
+                  <div className="flex flex-col items-center">
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center font-unbounded text-xs font-black border-2 z-10 relative
+                      ${y.active ? 'bg-[#2d7a3a] border-[#2d7a3a] text-white shadow-lg' : 'bg-white border-border text-muted-foreground'}`}>
+                      {y.active ? '★' : (i + 1)}
+                    </div>
+                    <div className="mt-1.5 text-center">
+                      <div className={`font-unbounded text-xs font-black ${y.active ? 'text-[#2d7a3a]' : 'text-foreground'}`}>{y.year}</div>
+                      <div className="text-[10px] text-muted-foreground">{y.label}</div>
+                    </div>
+                  </div>
+                  {i < arr.length - 1 && (
+                    <div className="w-24 sm:w-40 h-px bg-border mx-1 mb-5 shrink-0" />
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Evolution timeline */}
           <div className="space-y-4 mb-8">
             {/* V1 */}
@@ -772,7 +800,7 @@ export default function BrandPage() {
               <div className="flex flex-col sm:flex-row gap-6 items-start">
                 <div className="shrink-0">
                   <div className="inline-flex items-center gap-2 bg-muted text-muted-foreground text-[11px] font-mono font-bold px-3 py-1 rounded-full mb-3">
-                    Версия 1.0 · Набросок
+                    2018 · Версия 1.0 · Набросок
                   </div>
                   <div className="w-full sm:w-64 h-32 bg-[#f5f5f5] rounded-2xl border border-border flex items-center justify-center relative overflow-hidden">
                     {/* Sketch imitation */}
@@ -803,7 +831,7 @@ export default function BrandPage() {
               <div className="flex flex-col sm:flex-row gap-6 items-start">
                 <div className="shrink-0">
                   <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 text-[11px] font-mono font-bold px-3 py-1 rounded-full mb-3">
-                    Версия 2.0 · Проба цвета
+                    2019 · Версия 2.0 · Проба цвета
                   </div>
                   <div className="w-full sm:w-64 h-32 bg-[#e8f5e9] rounded-2xl border border-green-200 flex items-center justify-center relative overflow-hidden">
                     <div className="flex items-center gap-2">
@@ -833,7 +861,7 @@ export default function BrandPage() {
               <div className="flex flex-col sm:flex-row gap-6 items-start">
                 <div className="shrink-0">
                   <div className="inline-flex items-center gap-2 bg-orange-50 text-orange-700 text-[11px] font-mono font-bold px-3 py-1 rounded-full mb-3">
-                    Версия 3.0 · Прорыв
+                    2021 · Версия 3.0 · Прорыв
                   </div>
                   <div className="w-full sm:w-64 h-32 bg-[#faf8f2] rounded-2xl border border-amber-200 flex items-center justify-center relative overflow-hidden">
                     <div className="flex items-center gap-2.5">
@@ -864,7 +892,7 @@ export default function BrandPage() {
               <div className="flex flex-col sm:flex-row gap-6 items-start relative z-10">
                 <div className="shrink-0">
                   <div className="inline-flex items-center gap-2 bg-white/20 text-white text-[11px] font-mono font-bold px-3 py-1 rounded-full mb-3">
-                    ✦ Версия 4.0 · Финал
+                    ✦ 2024 · Версия 4.0 · Финал
                   </div>
                   <div className="w-full sm:w-64 h-32 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 flex items-center justify-center">
                     <div className="flex items-center gap-3">
