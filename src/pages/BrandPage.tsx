@@ -56,7 +56,7 @@ export default function BrandPage() {
           </div>
           {/* Contents */}
           <div className="relative z-10 flex flex-wrap gap-2 mt-7 pt-7 border-t border-white/10">
-            {['00 Эволюция', '01 Логотип', '02 Анатомия', '03 Варианты', '04 Защитная зона', '05 Размеры', '06 Запреты', '07 Цвета', '08 Типографика', '09 Паттерн', '10 UI', '11 Иконки соцсетей', '12 Носители', '13 Миссия', '14 Визуальная идентичность', '15 Основные / доп. / запрещённые цвета', '16 Шрифт и применение', '17 Применение стиля', '18 Вывески и магазин', '19 Упаковка', '20 Цифровые носители', '21 Руководство'].map(tag => (
+            {['00 Эволюция', '01 Логотип', '02 Анатомия', '03 Варианты', '04 Защитная зона', '05 Размеры', '06 Запреты', '07 Цвета', '08 Типографика', '09 Паттерн', '10 UI', '11 Иконки соцсетей', '12 Носители', '13 Айдентика · референсы', '14 Визуальная идентичность', '15 Основные / доп. / запрещённые цвета', '16 Шрифт и применение', '17 Применение стиля', '18 Вывески и магазин', '19 Упаковка', '20 Цифровые носители', '21 Руководство'].map(tag => (
               <span key={tag} className="bg-white/[0.08] text-white/70 text-xs px-3 py-1 rounded-full font-mono">{tag}</span>
             ))}
           </div>
@@ -1324,92 +1324,272 @@ export default function BrandPage() {
           </div>
         </section>
 
-        {/* ── 13 МИССИЯ И ЦЕННОСТИ ── */}
+        {/* ── 13 АЙДЕНТИКА: КОЛЛАЖ РЕФЕРЕНСОВ ── */}
         <section className="mb-14">
-          <SectionTitle number="13" title="Миссия и ценности бренда" />
+          <SectionTitle number="13" title="Айдентика бренда: коллаж референсов" />
 
-          {/* Mission statement */}
-          <div className="relative bg-gradient-to-br from-[#1a2e1c] to-[#2d7a3a] rounded-3xl p-10 mb-6 overflow-hidden">
-            <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(circle at 25px 25px, white 2px, transparent 0)', backgroundSize: '50px 50px' }} />
-            <div className="absolute right-6 top-6 text-8xl opacity-10 select-none rotate-12">🌍</div>
-            <div className="relative z-10 max-w-2xl">
-              <p className="text-white/50 text-xs font-mono uppercase tracking-[0.2em] mb-4">Миссия бренда</p>
-              <p className="font-unbounded text-2xl sm:text-3xl font-black text-white leading-tight mb-4">
-                Делать свежие и натуральные продукты доступными каждой семье
-              </p>
-              <p className="font-golos text-white/70 text-base leading-relaxed">
-                Мы верим: качественная еда не должна быть привилегией. Свежие овощи и фрукты — это основа здоровья, энергии и хорошего настроения. Наша задача — доставить их к вашему столу быстро, честно и с заботой о природе.
-              </p>
+          {/* Intro */}
+          <p className="font-golos text-muted-foreground text-sm leading-relaxed mb-8 max-w-2xl">
+            Перед разработкой логотипа был собран мудборд из референсов — брендов, стилей и деталей, которые отражают характер «Свежо!». Ниже — коллаж источников вдохновения, разбитый по смысловым блокам.
+          </p>
+
+          {/* ── КОЛЛАЖ ── */}
+          {/* Row 1: wide mood strip */}
+          <div className="rounded-3xl overflow-hidden border border-border/60 shadow-sm mb-3 bg-white">
+            <div className="p-4 pb-2">
+              <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">Общее настроение / moodboard</p>
+            </div>
+            <div className="grid grid-cols-5 gap-0 h-44">
+              {/* Tile 1 — deep forest */}
+              <div className="relative overflow-hidden bg-[#1a2e1c] flex items-end p-3">
+                <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(ellipse at 60% 40%, #4caf50 0%, transparent 70%)' }} />
+                <div className="absolute inset-0 flex items-center justify-center text-6xl opacity-20 select-none">🌲</div>
+                <span className="relative font-unbounded text-[9px] font-black text-white/60 uppercase tracking-widest">Лес</span>
+              </div>
+              {/* Tile 2 — farmers market */}
+              <div className="relative overflow-hidden bg-amber-100 col-span-2 flex items-end p-3">
+                <div className="absolute inset-0 flex items-center justify-center gap-2 flex-wrap opacity-40 text-5xl select-none p-4">
+                  🥬🍅🥕🫑🍊🧅🥦🌽🍇🥒
+                </div>
+                <span className="relative font-golos text-[9px] font-bold text-amber-900/60 uppercase tracking-wider">Фермерский рынок</span>
+              </div>
+              {/* Tile 3 — texture linen */}
+              <div className="relative overflow-hidden flex items-end p-3" style={{ background: 'repeating-linear-gradient(135deg, #e8e0cc 0px, #e8e0cc 2px, #f0ede4 2px, #f0ede4 12px)' }}>
+                <span className="relative font-mono text-[9px] text-stone-500/70 uppercase tracking-widest">Лён · текстура</span>
+              </div>
+              {/* Tile 4 — bold type */}
+              <div className="relative overflow-hidden bg-[#2d7a3a] flex items-center justify-center p-2">
+                <div className="text-center">
+                  <div className="font-unbounded text-4xl font-black text-white leading-none">С!</div>
+                  <div className="font-golos text-[8px] text-white/40 tracking-widest mt-1">МОНОГРАММА</div>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Vision */}
-          <div className="bg-white rounded-3xl border border-border/60 p-8 shadow-sm mb-6">
-            <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">Видение</p>
-            <p className="font-golos text-xl font-semibold text-foreground leading-relaxed">
-              «Стать самым любимым и доверенным продуктовым магазином в каждом городе России — тем, где всегда знают вас по имени»
-            </p>
-          </div>
+          {/* Row 2: 3 concept blocks */}
+          <div className="grid grid-cols-3 gap-3 mb-3">
 
-          {/* Values */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-            {[
-              { icon: '🌱', title: 'Натуральность', color: 'bg-emerald-50 border-emerald-200', accent: 'text-emerald-700', desc: 'Никаких ГМО, ускорителей роста и искусственных добавок. Каждый продукт — такой, каким он должен быть в природе.' },
-              { icon: '🤝', title: 'Честность', color: 'bg-blue-50 border-blue-200', accent: 'text-blue-700', desc: 'Реальные фото, точный вес, прозрачные цены. Мы не прячем происхождение продукта и не завышаем сроки годности.' },
-              { icon: '🌍', title: 'Экология', color: 'bg-green-50 border-green-200', accent: 'text-green-700', desc: 'Эко-упаковка из переработанного картона, минимум пластика, электрокурьеры. Каждый заказ — вклад в чистую планету.' },
-              { icon: '💛', title: 'Забота', color: 'bg-yellow-50 border-yellow-200', accent: 'text-yellow-700', desc: 'Мы семейный бизнес и относимся к каждому клиенту как к гостю в нашем доме. Ваше здоровье и довольство — наш приоритет.' },
-              { icon: '⚡', title: 'Скорость', color: 'bg-orange-50 border-orange-200', accent: 'text-orange-700', desc: 'Доставка за 90 минут — не просто обещание, а стандарт. Свежие продукты должны быть свежими, когда попадают к вам.' },
-              { icon: '🏡', title: 'Местность', color: 'bg-lime-50 border-lime-200', accent: 'text-lime-700', desc: 'Поддерживаем фермеров Подмосковья и Краснодарского края. Покупая у нас, вы помогаете развитию местного сельского хозяйства.' },
-            ].map(v => (
-              <div key={v.title} className={`rounded-3xl border p-6 ${v.color}`}>
-                <div className="text-3xl mb-3">{v.icon}</div>
-                <h3 className={`font-bold text-base mb-2 ${v.accent}`}>{v.title}</h3>
-                <p className="text-sm text-foreground/70 leading-relaxed">{v.desc}</p>
+            {/* Block A — Organic / bio brands */}
+            <div className="rounded-3xl overflow-hidden border border-border/60 bg-white shadow-sm">
+              <div className="bg-emerald-50 px-4 pt-4 pb-2">
+                <p className="text-[10px] font-mono text-emerald-700 uppercase tracking-widest mb-3">Органик-бренды</p>
+                <div className="space-y-2">
+                  {/* Ref: Whole Foods style */}
+                  <div className="bg-[#1a2e1c] rounded-2xl px-3 py-2 flex items-center gap-2">
+                    <div className="w-5 h-5 rounded bg-[#4caf50] flex items-center justify-center text-xs">🌿</div>
+                    <div>
+                      <div className="font-unbounded text-[9px] font-black text-white uppercase tracking-wide">Whole Earth</div>
+                      <div className="font-golos text-[8px] text-white/40">organic · fresh · local</div>
+                    </div>
+                  </div>
+                  {/* Ref: minimal green */}
+                  <div className="bg-white rounded-2xl border border-emerald-100 px-3 py-2 flex items-center gap-2">
+                    <div className="w-5 h-5 rounded-full border-2 border-[#2d7a3a] flex items-center justify-center">
+                      <div className="w-2 h-2 bg-[#2d7a3a] rounded-full" />
+                    </div>
+                    <div>
+                      <div className="font-golos text-[9px] font-bold text-[#2d7a3a] uppercase tracking-wider">Bio Market</div>
+                      <div className="font-golos text-[8px] text-muted-foreground">чистый минимализм</div>
+                    </div>
+                  </div>
+                  {/* Ref: stamp style */}
+                  <div className="rounded-2xl border-2 border-dashed border-[#2d7a3a] px-3 py-1.5 flex items-center gap-2">
+                    <div className="w-6 h-6 rounded-full border-2 border-[#2d7a3a] flex items-center justify-center text-[10px] font-black text-[#2d7a3a]">✓</div>
+                    <div className="font-unbounded text-[8px] font-black text-[#2d7a3a] uppercase tracking-widest">Certified<br/>Organic</div>
+                  </div>
+                </div>
               </div>
-            ))}
+              <div className="px-4 py-3">
+                <p className="text-[10px] text-muted-foreground leading-relaxed">Тёмный фон + белый логотип, органические сертификационные марки, штамп-стиль</p>
+              </div>
+            </div>
+
+            {/* Block B — Bold playful */}
+            <div className="rounded-3xl overflow-hidden border border-border/60 bg-white shadow-sm">
+              <div className="bg-orange-50 px-4 pt-4 pb-2">
+                <p className="text-[10px] font-mono text-orange-700 uppercase tracking-widest mb-3">Яркие / игривые бренды</p>
+                <div className="space-y-2">
+                  {/* Ref: Innocent smoothies style */}
+                  <div className="bg-[#f57c00] rounded-2xl px-3 py-2 flex items-center justify-between">
+                    <div className="font-unbounded text-base font-black text-white">yum<span className="text-[#fbc02d]">!</span></div>
+                    <span className="text-white/60 text-lg">🍊</span>
+                  </div>
+                  {/* Ref: bold wordmark */}
+                  <div className="rounded-2xl bg-[#fbc02d] px-3 py-2">
+                    <div className="font-unbounded text-xs font-black text-[#1a2e1c] tracking-tighter">JUICY FRESH</div>
+                    <div className="font-golos text-[8px] text-[#1a2e1c]/50">hand-picked daily</div>
+                  </div>
+                  {/* Ref: speech bubble */}
+                  <div className="relative bg-white rounded-2xl border-2 border-[#f57c00] px-3 py-1.5">
+                    <div className="font-golos text-xs font-bold text-[#f57c00]">«Попробуй!»</div>
+                    <div className="absolute -bottom-1.5 left-4 w-3 h-3 bg-white border-r-2 border-b-2 border-[#f57c00] rotate-45" />
+                  </div>
+                </div>
+              </div>
+              <div className="px-4 py-3">
+                <p className="text-[10px] text-muted-foreground leading-relaxed">Восклицательные знаки, смелые акценты, живой разговорный тон — как у Innocent Drinks</p>
+              </div>
+            </div>
+
+            {/* Block C — Russian food retail */}
+            <div className="rounded-3xl overflow-hidden border border-border/60 bg-white shadow-sm">
+              <div className="bg-lime-50 px-4 pt-4 pb-2">
+                <p className="text-[10px] font-mono text-lime-700 uppercase tracking-widest mb-3">Российский фудритейл</p>
+                <div className="space-y-2">
+                  {/* Ref: ВкусВилл-like */}
+                  <div className="bg-white rounded-2xl border border-lime-200 px-3 py-2 flex items-center gap-2">
+                    <div className="w-7 h-7 bg-lime-400 rounded-xl flex items-center justify-center text-sm">🥦</div>
+                    <div>
+                      <div className="font-golos text-[9px] font-black text-lime-700">ВкусВилл</div>
+                      <div className="font-golos text-[8px] text-muted-foreground">фермерские продукты</div>
+                    </div>
+                  </div>
+                  {/* Ref: ЕМЯ-like */}
+                  <div className="bg-[#2d7a3a] rounded-2xl px-3 py-2">
+                    <div className="font-unbounded text-[11px] font-black text-white tracking-wide">ЕМЯ</div>
+                    <div className="font-golos text-[8px] text-white/50">натуральное · своё</div>
+                  </div>
+                  {/* Ref: Azbuka Vkusa */}
+                  <div className="rounded-2xl bg-[#faf8f2] border border-border px-3 py-1.5 flex items-center gap-2">
+                    <div className="font-unbounded text-[9px] font-black text-[#1a2e1c] tracking-[0.15em]">СВОЙ</div>
+                    <div className="w-px h-4 bg-border" />
+                    <div className="font-golos text-[8px] text-muted-foreground">выбор · уют</div>
+                  </div>
+                </div>
+              </div>
+              <div className="px-4 py-3">
+                <p className="text-[10px] text-muted-foreground leading-relaxed">Простые слова, зелёные оттенки, ставка на «своё» и «натуральное»</p>
+              </div>
+            </div>
           </div>
 
-          {/* Brand personality */}
-          <div className="bg-white rounded-3xl border border-border/60 p-8 shadow-sm">
-            <h3 className="font-bold text-foreground mb-6">Характер и тон бренда</h3>
-            <div className="grid sm:grid-cols-2 gap-6">
-              <div>
-                <p className="text-xs font-bold text-[#2d7a3a] uppercase tracking-wider mb-4">Бренд говорит как...</p>
+          {/* Row 3: typography + icon refs */}
+          <div className="grid grid-cols-2 gap-3 mb-3">
+
+            {/* Typography references */}
+            <div className="rounded-3xl border border-border/60 bg-white shadow-sm overflow-hidden">
+              <div className="px-6 pt-5 pb-3">
+                <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest mb-5">Типографические референсы</p>
+                <div className="space-y-4">
+                  {/* Ref 1: Compressed black */}
+                  <div className="flex items-end gap-4 border-b border-border/40 pb-4">
+                    <div>
+                      <div className="font-unbounded text-4xl font-black text-[#1a2e1c] leading-none tracking-tighter">Сво</div>
+                      <div className="font-unbounded text-4xl font-black text-[#2d7a3a] leading-none tracking-tighter">жо!</div>
+                    </div>
+                    <div className="text-[9px] text-muted-foreground max-w-[110px] leading-relaxed">Unbounded Black — компрессованный жирный, акцент цветом на последнем слоге</div>
+                  </div>
+                  {/* Ref 2: stamp lettering */}
+                  <div className="flex items-center gap-4 border-b border-border/40 pb-4">
+                    <div className="border-4 border-[#2d7a3a] rounded-2xl px-4 py-2">
+                      <div className="font-unbounded text-sm font-black text-[#2d7a3a] uppercase tracking-[0.2em]">СВЕЖО</div>
+                    </div>
+                    <div className="text-[9px] text-muted-foreground leading-relaxed">Stamp-стиль — рамка + Unbounded. Референс из этикеток крафтовых продуктов</div>
+                  </div>
+                  {/* Ref 3: inline icon + word */}
+                  <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-1.5 bg-[#faf8f2] rounded-xl px-3 py-2">
+                      <span className="text-xl">🥦</span>
+                      <span className="font-unbounded text-sm font-black text-[#2d7a3a]">Свежо</span>
+                      <span className="font-unbounded text-sm font-black text-[#f57c00]">!</span>
+                    </div>
+                    <div className="text-[9px] text-muted-foreground leading-relaxed">Эмодзи + wordmark — отправная точка для финального логотипа</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Icon / mark references */}
+            <div className="rounded-3xl border border-border/60 bg-white shadow-sm overflow-hidden">
+              <div className="px-6 pt-5 pb-3">
+                <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest mb-5">Знаки и иконки — варианты эскизов</p>
+                <div className="grid grid-cols-3 gap-3">
+                  {[
+                    { bg: 'bg-[#2d7a3a]', shape: 'rounded-full', content: <span className="text-2xl">🥬</span>, label: 'Лист' },
+                    { bg: 'bg-[#1a2e1c]', shape: 'rounded-2xl', content: <span className="font-unbounded text-xl font-black text-white">С</span>, label: 'Монограмма' },
+                    { bg: 'bg-[#f57c00]', shape: 'rounded-full', content: <span className="font-unbounded text-2xl font-black text-white">!</span>, label: 'Восклицание' },
+                    { bg: 'bg-gradient-to-br from-[#2d7a3a] to-[#4caf50]', shape: 'rounded-3xl', content: <span className="text-2xl">🥦</span>, label: 'Брокколи' },
+                    { bg: 'bg-[#faf8f2] border border-[#2d7a3a]', shape: 'rounded-2xl', content: <div className="w-5 h-5 rounded-full border-[3px] border-[#2d7a3a]" />, label: 'Круг' },
+                    { bg: 'bg-[#2d7a3a]', shape: 'rounded-2xl', content: <div className="font-unbounded text-base font-black text-white leading-none">С<span className="text-[#f57c00]">!</span></div>, label: '→ ФИНАЛ' },
+                  ].map((item, i) => (
+                    <div key={i} className="flex flex-col items-center gap-1.5">
+                      <div className={`w-12 h-12 ${item.bg} ${item.shape} flex items-center justify-center shadow-sm`}>
+                        {item.content}
+                      </div>
+                      <span className={`text-[9px] font-mono ${item.label === '→ ФИНАЛ' ? 'text-[#2d7a3a] font-bold' : 'text-muted-foreground'}`}>{item.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 4: color & texture mood */}
+          <div className="rounded-3xl border border-border/60 bg-white shadow-sm overflow-hidden mb-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2">
+              {/* Color palette inspirations */}
+              <div className="px-6 pt-5 pb-5 border-b sm:border-b-0 sm:border-r border-border/40">
+                <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest mb-4">Цветовые референсы</p>
                 <div className="space-y-3">
                   {[
-                    { trait: 'Дружелюбный сосед', desc: 'Просто, тепло, без пафоса' },
-                    { trait: 'Эксперт-фермер', desc: 'Знает откуда каждый продукт' },
-                    { trait: 'Заботливый родитель', desc: 'Думает о здоровье семьи' },
-                    { trait: 'Эко-активист', desc: 'Ненавязчиво продвигает экологию' },
-                  ].map(t => (
-                    <div key={t.trait} className="flex items-center gap-3 p-3 bg-accent rounded-xl">
-                      <span className="w-2 h-2 bg-[#2d7a3a] rounded-full shrink-0" />
-                      <div>
-                        <p className="font-semibold text-sm text-foreground">{t.trait}</p>
-                        <p className="text-xs text-muted-foreground">{t.desc}</p>
+                    { name: 'Травяной зелёный', swatch: ['#1a2e1c', '#2d7a3a', '#4caf50', '#a5d6a7'], note: 'Глубина леса → свежесть → молодая зелень' },
+                    { name: 'Тёплый нейтраль', swatch: ['#faf8f2', '#f0ede4', '#e8dfc8', '#d4c9b0'], note: 'Крафт-бумага, лён, дерево' },
+                    { name: 'Акцент солнца', swatch: ['#f57c00', '#ff9800', '#fbc02d', '#fff59d'], note: 'Цитрус, закат, энергия' },
+                  ].map(row => (
+                    <div key={row.name}>
+                      <div className="flex items-center gap-1 mb-1">
+                        {row.swatch.map(c => <div key={c} className="flex-1 h-6 rounded-md" style={{ background: c }} />)}
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-[9px] font-bold text-foreground/70">{row.name}</span>
+                        <span className="text-[9px] text-muted-foreground">{row.note}</span>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
-              <div>
-                <p className="text-xs font-bold text-red-500 uppercase tracking-wider mb-4">Бренд НЕ говорит как...</p>
-                <div className="space-y-3">
+
+              {/* Texture & material inspirations */}
+              <div className="px-6 pt-5 pb-5">
+                <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest mb-4">Фактуры и материалы</p>
+                <div className="grid grid-cols-3 gap-2">
                   {[
-                    { trait: 'Корпоративный менеджер', desc: 'Никакого бюрократического языка' },
-                    { trait: 'Агрессивный продавец', desc: 'Без давления и манипуляций' },
-                    { trait: 'Премиум-бутик', desc: 'Мы доступны, не элитарны' },
-                    { trait: 'Технократ', desc: 'Никаких сложных терминов' },
+                    { label: 'Крафт-бумага', style: { background: 'repeating-linear-gradient(45deg, #e8d5b0 0px, #e8d5b0 1px, #f0e4c8 1px, #f0e4c8 8px)' } },
+                    { label: 'Льняная ткань', style: { backgroundImage: 'repeating-linear-gradient(0deg, #d4c9aa 0px, #d4c9aa 1px, #e8e0cc 1px, #e8e0cc 6px), repeating-linear-gradient(90deg, #d4c9aa 0px, #d4c9aa 1px, #e8e0cc 1px, #e8e0cc 6px)' } },
+                    { label: 'Дерево (срез)', style: { background: 'repeating-radial-gradient(circle at 50% 50%, #c8a882 0px, #c8a882 2px, #dbbf94 2px, #dbbf94 10px)' } },
+                    { label: 'Зелёный лист', style: { background: 'radial-gradient(ellipse at 30% 30%, #a5d6a7, #2d7a3a)' } },
+                    { label: 'Точечный паттерн', style: { backgroundImage: 'radial-gradient(circle at 8px 8px, #2d7a3a33 2px, transparent 0)', backgroundSize: '16px 16px', background: '#faf8f2' } },
+                    { label: 'Градиент земли', style: { background: 'linear-gradient(160deg, #4caf50, #1a2e1c)' } },
                   ].map(t => (
-                    <div key={t.trait} className="flex items-center gap-3 p-3 bg-red-50 rounded-xl border border-red-100">
-                      <span className="w-2 h-2 bg-red-400 rounded-full shrink-0" />
-                      <div>
-                        <p className="font-semibold text-sm text-foreground">{t.trait}</p>
-                        <p className="text-xs text-muted-foreground">{t.desc}</p>
-                      </div>
+                    <div key={t.label} className="flex flex-col gap-1">
+                      <div className="h-12 rounded-xl border border-border/40" style={t.style} />
+                      <span className="text-[9px] text-muted-foreground text-center leading-tight">{t.label}</span>
                     </div>
                   ))}
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 5: "what we took from refs" summary */}
+          <div className="bg-gradient-to-r from-[#1a2e1c] to-[#2d7a3a] rounded-3xl p-6 relative overflow-hidden">
+            <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 20px 20px, white 1.5px, transparent 0)', backgroundSize: '40px 40px' }} />
+            <div className="relative z-10">
+              <p className="text-white/50 text-[10px] font-mono uppercase tracking-widest mb-4">Что взяли из референсов → в итоговую айдентику</p>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                {[
+                  { from: 'Organic-бренды', took: 'Тёмный зелёный фон + белый знак', icon: '🌿' },
+                  { from: 'Innocent Drinks', took: 'Восклицательный знак как часть имени', icon: '!' },
+                  { from: 'Крафт-этикетки', took: 'Тёплая кремовая палитра нейтралей', icon: '📦' },
+                  { from: 'Российский фудритейл', took: 'Простое короткое название на кириллице', icon: '🇷🇺' },
+                ].map(item => (
+                  <div key={item.from} className="bg-white/10 rounded-2xl p-3">
+                    <div className="text-xl mb-2">{item.icon}</div>
+                    <p className="text-[9px] text-white/40 uppercase tracking-wider mb-1">{item.from}</p>
+                    <p className="text-xs font-golos text-white/90 leading-snug">{item.took}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
